@@ -155,7 +155,7 @@ new Vue({
             var that = this;
             this.movies = [];
             this.loading = true;
-            fetch("/filmdata/" + this.language + ".json").then(function(r){
+            fetch("filmdata/" + this.language + ".json").then(function(r){
                 return r.json();
             }).then(function(json){
                 that.movies = json;
