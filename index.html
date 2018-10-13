@@ -76,7 +76,7 @@
         </select>
         <div class="results-count">
             <span v-if="movies.length" style="color: green;">
-                Found {{movies.length}} movies
+                Found {{movies.length + (movies.length == 1000 ? '+' : '') }} movies
             </span>
             <span v-if="!loading && movies.length == 0" style="color: red;">
                 Couldn't find any movies for selected language and country
