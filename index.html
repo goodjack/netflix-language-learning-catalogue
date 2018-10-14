@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <style>
     body {
+        background: #ccc;
         font-family: 'Open Sans', sans-serif;
         padding: 20px;
     }
@@ -66,6 +67,12 @@
 <body>
 
 <div id="app">
+    <div class="intro">
+        <h1>
+            <img src="logo url" alt="logo">
+            Language Learning with Netflix
+        </h1>
+    </div>
     <div class="filters">
         <select v-model.lazy="language" @change="loadLanguage()">
           <option v-for="lang in languages" :value="lang">{{lang}}</option>
