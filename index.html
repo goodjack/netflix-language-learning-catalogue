@@ -82,7 +82,7 @@ To help find suitable programs in the language you study, we created a catalogue
 </p>
     </div>
     <div class="filters">
-        <select v-model.lazy="language" @change="loadLanguage()">
+        <select v-model.lazy="language" @change="loadLanguageCountry()">
           <option v-for="lang in languages" :value="lang">{{lang}}</option>
         </select>
         <select v-model.lazy="country">
@@ -115,7 +115,7 @@ To help find suitable programs in the language you study, we created a catalogue
             <th>Availability</th>
             <th colspan="2">Links</th>
         </tr>
-        <tr v-for="movie in movies" v-if="!country || movie.countries.indexOf(country) > -1">
+        <tr v-for="movie in movies">
             <td class="center">
                 <a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">
                     <div class="img-wrap">
@@ -163,17 +163,19 @@ new Vue({
         loading: true
     },
     created: function () {
-        this.loadLanguage();
+        this.loadLanguageCountry();
     },
     methods: {
-        loadLanguage: function() {
+        loadLanguageCountry: function() {
             var that = this;
             this.movies = [];
             this.loading = true;
             fetch("filmdata/" + this.language + ".json").then(function(r){
                 return r.json();
             }).then(function(json){
-                that.movies = json;
+                that.movies = json.filter(function(movie){
+                    return !country || movie.countries.indexOf(country) > -1;
+                });
                 this.loading = false;
             });
         }
