@@ -178,6 +178,10 @@ new Vue({
                     return !that.country || movie.countries.indexOf(that.country) > -1;
                 });
                 that.loading = false;
+            }).catch(function(err) {
+                that.movies = [];
+                that.loading = false;
+                console.error(err)
             });
         }
 //      reverseMessage: function () {
