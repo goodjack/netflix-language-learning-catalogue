@@ -174,7 +174,7 @@ new Vue({
                 return r.json();
             }).then(function(json){
                 that.movies = json.filter(function(movie){
-                    return !country || movie.countries.indexOf(country) > -1;
+                    return !this.country || movie.countries.indexOf(this.country) > -1;
                 });
                 this.loading = false;
             });
