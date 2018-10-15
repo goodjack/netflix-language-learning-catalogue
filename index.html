@@ -85,7 +85,7 @@ To help find suitable programs in the language you study, we created a catalogue
         <select v-model.lazy="language" @change="loadLanguageCountry()">
           <option v-for="lang in languages" :value="lang">{{lang}}</option>
         </select>
-        <select v-model.lazy="country">
+        <select v-model.lazy="country" @change="loadLanguageCountry()">
           <option value="">All countries</option>
           <option v-for="c in countries" :value="c">{{c}}</option>
         </select>
