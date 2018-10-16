@@ -60,7 +60,7 @@
         margin-top: 10px;
     }
     h1 { font-size: 20px; display: flex; align-items: center; }
-    .logo {width: 64px; height: auto; }
+    .logo {width: 64px; height: auto; margin-right:10px; }
     .
     [v-cloak] {display: none}
 </style>
@@ -120,19 +120,19 @@ To help find suitable programs in the language you study, we created a catalogue
         </tr>
         <tr v-for="movie in movies">
             <td class="center">
-                <a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">
+                <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
                     <div class="img-wrap">
                         <img :src="movie.image"/>
                     </div>
                 </a>
             </td>
             <td class="title">
-                <a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">
+                <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
                     {{movie.title}}
                 </a>
             </td>
             <td class="synopsis">
-                <a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">
+                <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
                     {{movie.synopsis}}
                 </a>
                 <!--<div class="mt10" style="text-align: right; margin-right: 20px;">-->
@@ -146,7 +146,7 @@ To help find suitable programs in the language you study, we created a catalogue
             <td class="center">{{movie.votes}}</td>
             <td class="center" :title="movie.countries">{{(movie.countries || []).length}} countries</td>
             <td><a :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a></td>
-            <td><a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">Netflix</a></td>
+            <td><a :href="'https://www.netflix.com/watch/' + movie.netflixid">Netflix</a></td>
         </tr>
     </table>
 </div>
