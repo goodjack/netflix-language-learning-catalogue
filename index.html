@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Netflix Catalogue by Country and Language - Catalogue</title>
+    <title>LLN - Index</title>
     <meta name="description" content="">
     <meta name="author" content="NLLE">
-
+    <link rel="icon" type="image/png" href="logo32.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <style>
     body {
@@ -69,127 +69,20 @@
 
 <body>
 
-<div id="app">
-    <div class="intro">
+<div style="width: 75%; margin: auto;">
         <h1>
             <img src="logo.png" alt="logo" class="logo">
-            Language Learning with Netflix - Catalogue
+            Learning Languages with Netflix
         </h1>
-        <p>For the best experience, we recommend you use select programs whose original language is the language you are studying. That is to say, look for French films to study French, and German films to study German etc.
-</p><p>
-The reason for this is that Netflix usually good subtitles for the original language that match the audio track. Subtitles often don't match the audio for dubbed audio.
-</p><p>
-To help find suitable programs in the language you study, we created a catalogue. You must select the country where Netflix detects you are located, as different programs are available in different countries. You can also select 'All Countries' if you are curious what programs are available in other countries.
-</p>
-    </div>
-    <div class="filters">
-        <select v-model.lazy="language" @change="loadLanguageCountry()">
-          <option v-for="lang in languages" :value="lang">{{lang}}</option>
-        </select>
-        <select v-model.lazy="country" @change="loadLanguageCountry()">
-          <option value="">All countries</option>
-          <option v-for="c in countries" :value="c">{{c}}</option>
-        </select>
-        <div class="results-count">
-            <span v-if="movies.length" style="color: green;">
-                Found {{movies.length + (movies.length == 1000 ? '+' : '') }} movies
-            </span>
-            <span v-if="!loading && movies.length == 0" style="color: red;">
-                Couldn't find any movies for selected language and country
-            </span>
-            <span v-if="loading && movies.length == 0" style="color: green;">
-                Loading...
-            </span>
-        </div>
-    </div>
+        <p>Thanks for visiting our page.</p>
 
-    <table v-if="movies.length" v-cloak>
-        <tr>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Synopsis</th>
-            <th>Genre</th>
-            <th>Released</th>
-            <th>Runtime</th>
-            <th>Rating</th>
-            <th>Votes</th>
-            <th>Availability</th>
-            <th colspan="2">Links</th>
-        </tr>
-        <tr v-for="movie in movies">
-            <td class="center">
-                <a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">
-                    <div class="img-wrap">
-                        <img :src="movie.image"/>
-                    </div>
-                </a>
-            </td>
-            <td class="title">
-                <a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">
-                    {{movie.title}}
-                </a>
-            </td>
-            <td class="synopsis">
-                <a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">
-                    {{movie.synopsis}}
-                </a>
-                <!--<div class="mt10" style="text-align: right; margin-right: 20px;">-->
-                    <!--<a :href="'https://www.netflix.com/watch/' + movie.netflixid">Watch on Netflix</a>-->
-                <!--</div>-->
-            </td>
-            <td class="center">{{movie.genre}}</td>
-            <td class="center">{{movie.released}}</td>
-            <td class="center">{{movie.runtime}}</td>
-            <td class="center">{{movie.rating}}</td>
-            <td class="center">{{movie.votes}}</td>
-            <td class="center" :title="movie.countries">{{(movie.countries || []).length}} countries</td>
-            <td><a :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a></td>
-            <td><a :href="'https://www.netflix.com/watch/' + movie.netflixid" target="_blank">Netflix</a></td>
-        </tr>
-    </table>
+        <p>You can install our extension on the Google Chrome Web Store <a href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm">here</a></p>
+
+        <p>Also, take a look at our <a href="catalogue.html">catalogue</a> and <a href="instructions.html">instructions for use.</a></p>
+
+        <p>To contact us, please write to LanguageLearningExtension@gmail.com</p>
+
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-
-<script>
-'use strict';
-new Vue({
-    el: '#app',
-    data: {
-        movies: [],
-        language: 'English',
-        country: '',
-        languages: ["Arabic","Bengali","Catalan","Chinese","Croatian","Danish","Dutch","English","Filipino","Finnish","French","Georgian","German","Hebrew","Hindi","Icelandic","Italian","Japanese","Korean","Norwegian","Polish","Portuguese","Russian","Spanish","Swedish","Tamil","Thai","Turkish","Vietnamese"],
-        countries: ["Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Cayman Islands","Central African Republic","Chad","Chile","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo, the Democratic Republic of the","Cook Islands","Costa Rica","Cote dIvoire","Croatia","Cuba","Curaçao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Lao Peoples Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mexico","Micronesia","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Republic of the Congo","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena","Saint Kitts and Nevis","Saint Lucia","Saint Martin","Saint Pierre and Miquelon","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Swaziland","Sweden","Switzerland","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe"],
-        loading: true
-    },
-    created: function () {
-        this.loadLanguageCountry();
-    },
-    methods: {
-        loadLanguageCountry: function() {
-            var that = this;
-            this.movies = [];
-            this.loading = true;
-            fetch("filmdata/" + this.language + ".json").then(function(r){
-                return r.json();
-            }).then(function(json){
-                that.movies = json.filter(function(movie){
-                    return !that.country || movie.countries.indexOf(that.country) > -1;
-                });
-                that.loading = false;
-            }).catch(function(err) {
-                that.movies = [];
-                that.loading = false;
-                console.error(err)
-            });
-        }
-//      reverseMessage: function () {
-//        return this.message.split('').reverse().join('')
-//      }
-    }
-})
-
-</script>
 </body>
 </html>
