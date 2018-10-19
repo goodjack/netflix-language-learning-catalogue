@@ -139,13 +139,17 @@ To help find suitable programs in the language you study, we created a catalogue
                     <!--<a :href="'https://www.netflix.com/watch/' + movie.netflixid">Watch on Netflix</a>-->
                 <!--</div>-->
             </td>
-            <td class="center">{{movie.genre}}</td>
+            <td class="center">{{movie.genre || "unknown"}}</td>
             <td class="center">{{movie.released}}</td>
             <td class="center">{{movie.runtime}}</td>
-            <td class="center">{{movie.rating}}</td>
-            <td class="center">{{movie.votes}}</td>
+            <td class="center">{{movie.rating || "unknown"}}</td>
+            <td class="center">{{movie.votes || "unknown"}}</td>
             <td class="center" :title="movie.countries">{{(movie.countries || []).length}} countries</td>
-            <td><a :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a></td>
+            <td>
+                <span v-if="movie.imdbid">
+                <a :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a>
+                </span>
+            </td>
             <td><a :href="'https://www.netflix.com/watch/' + movie.netflixid">Netflix</a></td>
         </tr>
     </table>
