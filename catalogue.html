@@ -205,7 +205,7 @@ new Vue({
             var hash = location.hash.match(new RegExp(key + '=([^&]*)'));
 
             if (location.hash && hash) {
-                return hash[1];
+                return decodeURI(hash[1]);
             }
 
             return null;
