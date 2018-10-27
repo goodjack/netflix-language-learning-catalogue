@@ -12,7 +12,8 @@
 <style>
     body {
         font-family: 'Open Sans', sans-serif;
-        padding: 20px;
+        padding: 0;
+        margin: 0;
         overflow-y: scroll;
     }
     table, tr, td, th {
@@ -111,10 +112,7 @@ To help find suitable programs in the language you study, we created a catalogue
             <th>Title</th>
             <th>Synopsis</th>
             <th>Genre</th>
-            <th>Released</th>
-            <th>Runtime</th>
             <th>Rating</th>
-            <th>Votes</th>
             <th>Availability</th>
             <th colspan="2">Links</th>
         </tr>
@@ -139,11 +137,12 @@ To help find suitable programs in the language you study, we created a catalogue
                     <!--<a :href="'https://www.netflix.com/watch/' + movie.netflixid">Watch on Netflix</a>-->
                 <!--</div>-->
             </td>
-            <td class="center">{{movie.genre || "unknown"}}</td>
-            <td class="center">{{movie.released}}</td>
-            <td class="center">{{movie.runtime}}</td>
-            <td class="center">{{movie.rating || "unknown"}}</td>
-            <td class="center">{{movie.votes || "unknown"}}</td>
+            <td class="center">
+                <strong>Genre: </strong>{{movie.genre || "unknown"}} <br>
+                <strong>Released: </strong>{{movie.released}} <br>
+                <string>Runtime: </strong>{{movie.runtime}}
+            </td>
+            <td class="center"><strong>{{movie.rating || "unknown"}}</strong><br><span ng-if="movie.votes">({{movie.votes}} votes)</span></td>
             <td class="center" :title="movie.countries">{{(movie.countries || []).length}} countries</td>
             <td>
                 <span v-if="movie.imdbid">
