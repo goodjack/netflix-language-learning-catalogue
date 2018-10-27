@@ -159,7 +159,10 @@ To help find suitable programs in the language you study, we created a catalogue
                 </a>
                 <div class="bottom-links" style="text-align: right; margin-right: 20px;">
                     <a class="imdb-link" v-if="movie.imdbid" :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a>
-                    <a :href="'https://www.netflix.com/watch/' + movie.netflixid">Watch on Netflix</a>
+                    <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
+                        Watch on Netflix
+                        <span style="margin-left: 10px;">▶</span>
+                    </a>
                 </div>
             </td>
             <td class="center">
