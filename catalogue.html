@@ -174,8 +174,11 @@ new Vue({
         loading: true
     },
     created: function () {
-        this.language = this.getHashValue('language') || 'English';
-        this.country = this.getHashValue('country') || '';
+        var language = this.getHashValue('language');
+        if (this.languages.indexOf(language) > -1) this.language = language;
+        var country = this.getHashValue('country');
+        if (this.countries.indexOf(country) > -1) this.country = country;
+        
         this.loadLanguageCountry();
     },
     methods: {
