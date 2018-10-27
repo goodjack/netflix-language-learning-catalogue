@@ -66,6 +66,13 @@
     .mt10 {
         margin-top: 10px;
     }
+    .bottom-links {
+        margin-top: 30px;
+        text-align: right;
+    }
+    .bottom-links a {
+        margin: 0 20px;
+    }
     .mb {
        margin-bottom: 15px; 
     }
@@ -142,9 +149,10 @@ To help find suitable programs in the language you study, we created a catalogue
                 <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
                     {{movie.synopsis}}
                 </a>
-                <!--<div class="mt10" style="text-align: right; margin-right: 20px;">-->
-                    <!--<a :href="'https://www.netflix.com/watch/' + movie.netflixid">Watch on Netflix</a>-->
-                <!--</div>-->
+                    <div class="bottom-links" style="text-align: right; margin-right: 20px;">
+                        <a v-if="movie.imdbid" :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a>
+                        <a :href="'https://www.netflix.com/watch/' + movie.netflixid">Watch on Netflix</a>
+                    </div>
             </td>
             <td class="center">
                 <div class="mb"><strong>Genre: </strong>{{movie.genre || "unknown"}} <br></div>
