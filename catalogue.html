@@ -31,10 +31,11 @@
         max-height: 200px;
     }
     .title {
+        font-size: 1.3em;
         font-weight: bold;
-    }
-    .title a {
         text-decoration: none;
+        display: block;
+        margin-bottom: 15px;
         color: black;
     }
     .synopsis a {
@@ -115,8 +116,7 @@ To help find suitable programs in the language you study, we created a catalogue
     <table v-if="movies.length" v-cloak>
         <tr>
             <th>Image</th>
-            <th>Title</th>
-            <th>Synopsis</th>
+            <th>Title &amp; Synopsis</th>
             <th>Info</th>
             <th>Rating</th>
             <th>Availability</th>
@@ -130,12 +130,11 @@ To help find suitable programs in the language you study, we created a catalogue
                     </div>
                 </a>
             </td>
-            <td class="title">
-                <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
+            <td class="synopsis">
+                <a class="title" :href="'https://www.netflix.com/watch/' + movie.netflixid">
                     {{movie.title}}
                 </a>
-            </td>
-            <td class="synopsis">
+                <br>
                 <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
                     {{movie.synopsis}}
                 </a>
