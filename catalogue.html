@@ -16,6 +16,11 @@
         margin: 0;
         overflow-y: scroll;
     }
+    .page-wrap {
+        max-width: 1366px; 
+        margin: 0 auto; 
+        padding: 0 40px;
+    }
     table, tr, td, th {
         border: 1px solid #ddd;
         border-collapse: collapse;
@@ -100,7 +105,7 @@
 
 <body>
 
-<div style="max-width: 1366px; margin: 0 auto; padding: 0 20px;">
+<div class="page-wrap">
 
 <div id="app">
     <div class="intro">
@@ -124,13 +129,13 @@ To help find suitable programs in the language you study, we created a catalogue
           <option v-for="c in countries" :value="c">{{c}}</option>
         </select>
         <div class="results-count">
-            <span v-if="movies.length" style="color: green;">
+            <span v-if="movies.length" style="color: gray; font-weight: bold;">
                 Found {{movies.length + (movies.length == 1000 ? '+' : '') }} movies
             </span>
             <span v-if="!loading && movies.length == 0" style="color: red;">
                 Couldn't find any movies for selected language and country
             </span>
-            <span v-if="loading && movies.length == 0" style="color: green;">
+            <span v-if="loading && movies.length == 0" style="color: gray;">
                 Loading...
             </span>
         </div>
