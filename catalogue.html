@@ -43,7 +43,7 @@
         padding-top: 30px;
         padding-left: 20px;
     }
-    .synopsis a {
+    .synopsis-text {
         text-decoration: none;
         color: black;
     }
@@ -132,7 +132,6 @@ To help find suitable programs in the language you study, we created a catalogue
             <th>Info</th>
             <th>Rating</th>
             <th>Availability</th>
-            <th colspan="2">Links</th>
         </tr>
         <tr v-for="movie in movies">
             <td class="center">
@@ -146,13 +145,13 @@ To help find suitable programs in the language you study, we created a catalogue
                 <a class="title" :href="'https://www.netflix.com/watch/' + movie.netflixid">
                     {{movie.title}}
                 </a>
-                <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
+                <a class="synopsis=text" :href="'https://www.netflix.com/watch/' + movie.netflixid">
                     {{movie.synopsis}}
                 </a>
-                    <div class="bottom-links" style="text-align: right; margin-right: 20px;">
-                        <a v-if="movie.imdbid" :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a>
-                        <a :href="'https://www.netflix.com/watch/' + movie.netflixid">Watch on Netflix</a>
-                    </div>
+                <div class="bottom-links" style="text-align: right; margin-right: 20px;">
+                    <a v-if="movie.imdbid" :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a>
+                    <a :href="'https://www.netflix.com/watch/' + movie.netflixid">Watch on Netflix</a>
+                </div>
             </td>
             <td class="center">
                 <div class="mb"><strong>Genre: </strong>{{movie.genre || "unknown"}} <br></div>
@@ -163,13 +162,9 @@ To help find suitable programs in the language you study, we created a catalogue
                 <strong class="mb">{{movie.rating || "unknown"}}</strong><br>
                 <span class="small" ng-if="movie.votes">({{movie.votes}} votes)</span>
             </td>
-            <td class="center" :title="movie.countries">{{(movie.countries || []).length}} countries</td>
-            <td>
-                <span v-if="movie.imdbid">
-                <a :href="'https://www.imdb.com/title/' +  movie.imdbid" target="_blank">IMDB</a>
-                </span>
+            <td class="center" :title="movie.countries">
+                {{(movie.countries || []).length}} countries
             </td>
-            <td><a :href="'https://www.netflix.com/watch/' + movie.netflixid">Netflix</a></td>
         </tr>
     </table>
 </div>
