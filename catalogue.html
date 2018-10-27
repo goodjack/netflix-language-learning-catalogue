@@ -160,13 +160,15 @@ To help find suitable programs in the language you study, we created a catalogue
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 
 <script>
+(function(){
 'use strict';
+    
 new Vue({
     el: '#app',
     data: {
         movies: [],
-        language: 'English',
-        country: '',
+        language: this.getHashValue('language') || 'English',
+        country: this.getHashValue('country') || '',
         languages: ["Arabic","Bengali","Catalan","Chinese","Croatian","Danish","Dutch","English","Filipino","Finnish","French","Georgian","German","Hebrew","Hindi","Icelandic","Italian","Japanese","Korean","Norwegian","Polish","Portuguese","Russian","Spanish","Swedish","Tamil","Thai","Turkish","Vietnamese"],
         countries: ["Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Cayman Islands","Central African Republic","Chad","Chile","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo, the Democratic Republic of the","Cook Islands","Costa Rica","Cote dIvoire","Croatia","Cuba","Curaçao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Lao Peoples Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mexico","Micronesia","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Republic of the Congo","Romania","Russia","Rwanda","Réunion","Saint Barthélemy","Saint Helena","Saint Kitts and Nevis","Saint Lucia","Saint Martin","Saint Pierre and Miquelon","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Swaziland","Sweden","Switzerland","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe"],
         loading: true
@@ -179,6 +181,8 @@ new Vue({
             var that = this;
             this.movies = [];
             this.loading = true;
+            this.setHashValue('language', this.language);
+            this.setHashValue('country', this.country);
             fetch("filmdata/" + this.language + ".json").then(function(r){
                 return r.json();
             }).then(function(json){
@@ -191,13 +195,46 @@ new Vue({
                 that.loading = false;
                 console.error(err)
             });
-        }
+        },
 //      reverseMessage: function () {
 //        return this.message.split('').reverse().join('')
 //      }
+        getHashValue: function (key) {
+            var hash = location.hash.match(new RegExp(key + '=([^&]*)'));
+
+            if (location.hash && hash) {
+                return hash[1];
+            }
+
+            return null;
+        },
+        setHashValue: function (key, value) {
+            key = encodeURI(key); value = encodeURI(value);
+
+            var kvp = location.hash.substr(1).split('&');
+            if (! location.hash) {
+                kvp = [];
+            }
+            var i = kvp.length; var x; while(i--){
+                x = kvp[i].split('=');
+
+                if (x[0] == key){
+                    x[1] = value;
+                    kvp[i] = x.join('=');
+                    break;
+                }
+            }
+
+            if(i < 0) {
+                kvp[kvp.length] = [key,value].join('=');
+            }
+
+            document.location.hash = '#' + kvp.join('&');
+        }
     }
 })
-
+    
+})();
 </script>
 </body>
 </html>
