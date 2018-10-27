@@ -60,6 +60,9 @@
     .mt10 {
         margin-top: 10px;
     }
+    .mb {
+       margin-bottom: 5px; 
+    }
     h1 { font-size: 20px; display: flex; align-items: center; }
     .logo {width: 64px; height: auto; margin-right:10px; }
     .
@@ -138,9 +141,9 @@ To help find suitable programs in the language you study, we created a catalogue
                 <!--</div>-->
             </td>
             <td class="center">
-                <strong>Genre: </strong>{{movie.genre || "unknown"}} <br>
-                <strong>Released: </strong>{{movie.released}} <br>
-                <string>Runtime: </strong>{{movie.runtime}}
+                <div class="mb"><strong>Genre: </strong>{{movie.genre || "unknown"}} <br></div>
+                <div class="mb"><strong>Released: </strong>{{movie.released}} <br></div>
+                <div class="mb"><strong>Runtime: </strong>{{movie.runtime}}</div>
             </td>
             <td class="center"><strong>{{movie.rating || "unknown"}}</strong><br><span ng-if="movie.votes">({{movie.votes}} votes)</span></td>
             <td class="center" :title="movie.countries">{{(movie.countries || []).length}} countries</td>
