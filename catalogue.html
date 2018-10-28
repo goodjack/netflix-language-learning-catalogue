@@ -112,24 +112,32 @@
 <div id="app">
     <div class="intro">
         <h1>
-            <img src="logo.png" alt="logo" class="logo">
+            <a href="/"><img src="logo.png" alt="logo" class="logo"></a>
             Language Learning with Netflix - Catalogue
         </h1>
-        <p>For the best experience, we recommend you use select programs whose original language is the language you are studying. That is to say, look for French films to study French, and German films to study German etc.
-</p><p>
-The reason for this is that Netflix usually good subtitles for the original language that match the audio track. Subtitles often don't match the audio for dubbed audio.
-</p><p>
-To help find suitable programs in the language you study, we created a catalogue. You must select the country where Netflix detects you are located, as different programs are available in different countries. You can also select 'All Countries' if you are curious what programs are available in other countries.
+        <p>We created this catalogue to help you find Netflix titles with high-quality subtitles in the language you study. The titles listed here should work well with our <a href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm">extension for studying languages with Netflix.</a></p>
+
+        <p>
+More info: Netflix usually has good subtitles for the original language of a title, that match the audio track. Subtitles often don't match the audio for dubbed audio.
+</p>
+<p>The catalogue lists titles by their original language. It allows you to find French films, to study French, and German films to study German etc. By using one of the listed titles, you should have good subtitles that match the audio.
+</p>
+<p>
+You must also select the country where Netflix detects you are located, as not all titles are available in all countries. You can also select 'All Countries' if you are curious what programs are available in other countries.
 </p>
     </div>
     <div class="filters">
-        <select v-model.lazy="language" @change="loadLanguageCountry()">
-          <option v-for="lang in languages" :value="lang">{{lang}}</option>
-        </select>
-        <select v-model.lazy="country" @change="loadLanguageCountry()">
-          <option value="">All countries</option>
-          <option v-for="c in countries" :value="c">{{c}}</option>
-        </select>
+        <label>Language you study: 
+            <select v-model.lazy="language" @change="loadLanguageCountry()">
+              <option v-for="lang in languages" :value="lang">{{lang}}</option>
+            </select>
+        </label>
+        <label>Your Netflix country: 
+            <select v-model.lazy="country" @change="loadLanguageCountry()">
+              <option value="">All countries</option>
+              <option v-for="c in countries" :value="c">{{c}}</option>
+            </select>
+        </label>
         <div class="results-count">
             <span v-if="movies.length" style="color: gray; font-weight: bold;">
                 Found {{movies.length + (movies.length == 1000 ? '+' : '') }} movies
