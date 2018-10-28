@@ -65,6 +65,7 @@
         display: flex;
         align-items: center;
         padding-top: 25px;
+        flex-wrap: wrap;
     }
     .filters label {
         font-weight: bold;
@@ -156,7 +157,7 @@ You must also select the country where Netflix detects you are located, as not a
             </select>
         </label>
         <div class="results-count">
-            <span v-if="movies.length" style="color: gray; font-weight: bold;">
+            <span v-if="movies.length" style="color: #b9090b; font-weight: bold;">
                 Found {{movies.length + (movies.length == 1000 ? '+' : '') }} movies
             </span>
             <span v-if="!loading && movies.length == 0" style="color: red;">
