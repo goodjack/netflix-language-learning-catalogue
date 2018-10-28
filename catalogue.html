@@ -101,7 +101,7 @@
         margin-bottom: 10px;
     }
     .bottom-links .imdb-link {
-        background: #f5c518;
+        background: #fae3e1;
         color: #000;
         font-weight: 900;
     }
@@ -113,7 +113,6 @@
     }
     h1 { font-size: 20px; display: flex; align-items: center; }
     .logo {width: 64px; height: auto; margin-right:10px; }
-    .imdb-link { background: #fae3e1; }
     [v-cloak] {display: none}
 </style>
 
@@ -157,7 +156,7 @@ You must also select the country where Netflix detects you are located, as not a
             </select>
         </label>
         <div class="results-count">
-            <span v-if="movies.length" style="color: #b9090b; font-weight: bold;">
+            <span v-if="movies.length" style="color: #b9090b;">
                 Found {{movies.length + (movies.length == 1000 ? '+' : '') }} movies
             </span>
             <span v-if="!loading && movies.length == 0" style="color: red;">
