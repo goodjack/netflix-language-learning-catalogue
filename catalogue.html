@@ -157,10 +157,10 @@ You must also select the country where Netflix detects you are located, as not a
         </label>
         <div class="results-count">
             <span v-if="movies.length" style="color: #666;">
-                Found {{movies.length + (movies.length == 1000 ? '+' : '') }} movies
+                Found {{movies.length + (movies.length == 1000 ? '+' : '') }} titles
             </span>
             <span v-if="!loading && movies.length == 0" style="color: red;">
-                Couldn't find any movies for selected language and country
+                Couldn't find any titles for selected language and country
             </span>
             <span v-if="loading && movies.length == 0" style="color: gray;">
                 Loading...
