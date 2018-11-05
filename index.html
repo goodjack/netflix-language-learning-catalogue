@@ -79,6 +79,12 @@
     [v-cloak] {display: none}
 </style>
 
+<script type="text/javascript">
+
+    function getQueryParams(){var e=document.location.search;e=e.split("+").join(" ");for(var r,o={},n=/[?&]?([^=]+)=([^&]*)/g;r=n.exec(e);)o[decodeURIComponent(r[1])]=decodeURIComponent(r[2]);return o}var query=getQueryParams();query.ref&&(document.cookie="ref="+query.ref);
+
+</script>
+
 </head>
 
 <body>
