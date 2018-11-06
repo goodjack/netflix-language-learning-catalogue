@@ -99,9 +99,9 @@
     if(query.ref) {
     var expiration_date = new Date();
     expiration_date.setMonth(expiration_date.getMonth() + 1);
-        document.cookie = "ref" + "=" + query.ref + " path=/; expires=" + expiration_date.toUTCString();
+        document.cookie = "ref" + "=" + query.ref + "; path=/; expires=" + expiration_date.toUTCString();
     }
-    
+
 </script>
 
 </head>
