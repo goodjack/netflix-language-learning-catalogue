@@ -81,8 +81,27 @@
 
 <script type="text/javascript">
 
-    function getQueryParams(){var e=document.location.search;e=e.split("+").join(" ");for(var r,o={},n=/[?&]?([^=]+)=([^&]*)/g;r=n.exec(e);)o[decodeURIComponent(r[1])]=decodeURIComponent(r[2]);return o}var query=getQueryParams();query.ref&&(document.cookie="ref="+query.ref);
+    function getQueryParams() {
 
+        var qs = document.location.search;
+        qs = qs.split("+").join(" ");
+        var params = {}, tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
+        while (tokens = re.exec(qs)) {
+            params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+        }
+
+        return params;
+    }
+ 
+    var query = getQueryParams();
+
+    if(query.ref) {
+    var expiration_date = new Date();
+    expiration_date.setMonth(expiration_date.getMonth() + 1);
+        document.cookie = "ref" + "=" + query.ref + " path=/; expires=" + expiration_date.toUTCString();
+    }
+    
 </script>
 
 </head>
