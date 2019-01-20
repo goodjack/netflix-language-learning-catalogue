@@ -9,100 +9,104 @@
     <meta name="author" content="NLLE">
     <link rel="icon" type="image/png" href="logo32.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Open Sans', sans-serif;
-        overflow-y: scroll;
-        padding: 40px;
-        margin: 0;
-        box-sizing: border-box;
-        background-color: rgb(250, 227, 225);
-    }
-    .page-wrap {
-        background-color: #fff;
-        margin-bottom: 48px;
-        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
-        padding-bottom: 6px;
-        max-width: 1366px;
-        margin: 0 auto;
-        padding: 35px 45px;
-        position: relative;
-        background: white;
-    }
-    table, tr, td, th {
-        border: 1px solid #ddd;
-        border-collapse: collapse;
-    }
-    td, th {
-        padding: 10px;
-    }
-    .img-wrap {
-        min-height: 200px;
-        min-width: 1px;
-    }
-    img {
-        max-height: 200px;
-    }
-    .title {
-        font-weight: bold;
-    }
-    .title a {
-        text-decoration: none;
-        color: black;
-    }
-    .synopsis a {
-        text-decoration: none;
-        color: black;
-    }
-    .filters {
-        margin: 30px 0 20px;
-        display: flex;
-        align-items: center;
-    }
-    select {
-        padding: 10px 15px;
-        margin-right: 10px;
-        width: 180px;
-    }
-    .results-count {
-        margin-left: 14px;
-    }
-    .center {
-        text-align: center;
-    }
-    .mt10 {
-        margin-top: 10px;
-    }
-    h1 { font-size: 20px; display: flex; align-items: center; }
-    .logo {width: 64px; height: auto; margin-right:10px; }
-    .
-    [v-cloak] {display: none}
-</style>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            overflow-y: scroll;
+            padding: 40px;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(250, 227, 225);
+        }
+        .page-wrap {
+            background-color: #fff;
+            margin-bottom: 48px;
+            box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+            padding-bottom: 6px;
+            max-width: 1366px;
+            margin: 0 auto;
+            padding: 35px 45px;
+            position: relative;
+            background: white;
+            text-align: center;
+        }
+        table, tr, td, th {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 10px;
+        }
+        .img-wrap {
+            min-height: 200px;
+            min-width: 1px;
+        }
+        img {
+            max-height: 200px;
+        }
+        .title {
+            font-weight: bold;
+        }
+        .title a {
+            text-decoration: none;
+            color: black;
+        }
+        .synopsis a {
+            text-decoration: none;
+            color: black;
+        }
+        .filters {
+            margin: 30px 0 20px;
+            display: flex;
+            align-items: center;
+        }
+        select {
+            padding: 10px 15px;
+            margin-right: 10px;
+            width: 180px;
+        }
+        .results-count {
+            margin-left: 14px;
+        }
+        .center {
+            text-align: center;
+        }
+        .mt10 {
+            margin-top: 10px;
+        }
+        h1 { font-size: 20px; display: flex; align-items: center; justify-content: center; }
+        .logo {width: 64px; height: auto; margin-right:10px; }
+        .
+        [v-cloak] {display: none}
+        iframe {
+            max-width: 100%;
+        }
+    </style>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-    function getQueryParams() {
+        function getQueryParams() {
 
-        var qs = document.location.search;
-        qs = qs.split("+").join(" ");
-        var params = {}, tokens,
-        re = /[?&]?([^=]+)=([^&]*)/g;
-        while (tokens = re.exec(qs)) {
-            params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+            var qs = document.location.search;
+            qs = qs.split("+").join(" ");
+            var params = {}, tokens,
+                re = /[?&]?([^=]+)=([^&]*)/g;
+            while (tokens = re.exec(qs)) {
+                params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+            }
+
+            return params;
         }
 
-        return params;
-    }
- 
-    var query = getQueryParams();
+        var query = getQueryParams();
 
-    if(query.ref) {
-    var expiration_date = new Date();
-    expiration_date.setMonth(expiration_date.getMonth() + 1);
-        document.cookie = "ref" + "=" + query.ref + "; path=/; expires=" + expiration_date.toUTCString();
-    }
+        if(query.ref) {
+            var expiration_date = new Date();
+            expiration_date.setMonth(expiration_date.getMonth() + 1);
+            document.cookie = "ref" + "=" + query.ref + "; path=/; expires=" + expiration_date.toUTCString();
+        }
 
-</script>
+    </script>
 
 </head>
 
@@ -110,18 +114,21 @@
 <div style="width: 100%; height: 100px; position: absolute; background-color: rgb(219, 68, 55); top: 0; left: 0;">
 </div>
 <div class="page-wrap">
-        <div style="background-color: rgb(255, 138, 116); height: 8px; position: absolute; top: 0; width: 100%; left: 0;"></div>
-        <h1>
-            <a href="/"><img src="logo.png" alt="logo" class="logo"></a>
-            Learning Languages with Netflix
-        </h1>
-        <p>Thanks for visiting our page.</p>
+    <div style="background-color: rgb(255, 138, 116); height: 8px; position: absolute; top: 0; width: 100%; left: 0;"></div>
+    <h1>
+        <a href="/"><img src="logo.png" alt="logo" class="logo"></a>
+        Learning Languages with Netflix
+    </h1>
 
-        <p>You can install our extension on the <a href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm">Google Chrome Web Store.</a></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pMrWX2dlGIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <p>Also, take a look at our <a href="catalogue.html">catalogue</a> and <a href="instructions.html">instructions for use.</a></p>
+    <p>Thanks for visiting our page.</p>
 
-        <p>To contact us, please write to LanguageLearningExtension@gmail.com</p>
+    <p>You can install our extension on the <a href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm">Google Chrome Web Store.</a></p>
+
+    <p>Also, take a look at our <a href="catalogue.html">catalogue</a> and <a href="instructions.html">instructions for use.</a></p>
+
+    <p>To contact us, please write to LanguageLearningExtension@gmail.com</p>
 
 </div>
 
