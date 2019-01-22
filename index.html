@@ -81,18 +81,21 @@
             justify-content: center; 
             margin-bottom: 22px; 
         }
+        .title {
+            position: relative;
+        }
         @media (min-width: 1366px) {
-            .title iframe {
+            .title .fb {
                 border: none;
                 overflow: hidden;
                 position: absolute;
                 right: 0;
-                top: 53px;
+                top: 5px;
             }
         }
         .logo {width: 64px; height: auto; margin-right:10px; }
         [v-cloak] {display: none}
-        iframe {
+        .video {
             max-width: 100%;
             display: block;
             margin: 0 auto;
@@ -102,6 +105,15 @@
         }
         .video {
             max-height: 50vw;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-bottom: 5px;
+            padding: 15px;
+            border-bottom: 1px solid #aaa;
         }
     </style>
 
@@ -167,6 +179,14 @@
 <div style="width: 100%; height: 100px; position: absolute; background-color: rgb(219, 68, 55); top: 0; left: 0;">
 </div>
 <div class="page-wrap">
+    <nav class="top-nav">
+      <a href="/">Home</a> |
+      <a href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm">Install</a> |
+      <a href="/js/">Catalogue</a> |
+      <a href="/jquery/">Instructions</a>
+      <a href="/jquery/">Facebook</a>
+    </nav>
+    
     <div style="background-color: rgb(255, 138, 116); height: 8px; position: absolute; top: 0; width: 100%; left: 0;"></div>
     
     <div class="title">
@@ -176,7 +196,7 @@
         </h1>
 
         <!-- FB code for like button -->
-         <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="360" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+         <iframe class="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="360" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
         <!-- FB code end -->
     </div>
     
