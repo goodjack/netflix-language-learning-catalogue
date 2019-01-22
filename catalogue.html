@@ -111,6 +111,22 @@
     .small {
         font-size: .8em;
     }
+    .title {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (min-width: 1100px) {
+        .title {
+            flex-direction: row;
+            align-items: center;
+        }
+        .title h1 {
+            flex-grow: 1;
+        }
+        .title iframe {
+            flex-grow: 0;
+        }
+    }
     h1 { font-size: 20px; display: flex; align-items: center; }
     .logo {width: 64px; height: auto; margin-right:10px; }
     [v-cloak] {display: none}
@@ -182,14 +198,15 @@
     
 <div id="app">
     <div class="intro">
-        <h1>
-            <a href="/"><img src="logo.png" alt="logo" class="logo"></a>
-            Language Learning with Netflix - Catalogue
-        </h1>
-                <!-- FB code for like button -->
-     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-    <!-- FB code end -->
-    
+        <div class="title">
+            <h1>
+                <a href="/"><img src="logo.png" alt="logo" class="logo"></a>
+                Language Learning with Netflix - Catalogue
+            </h1>
+            <!-- FB code for like button -->
+             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="330" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <!-- FB code end -->
+        </div>
         <p>We created this catalogue to help you find Netflix titles with high-quality subtitles in the language you study. The titles listed here should work well with our <a href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm">extension for studying languages with Netflix.</a></p>
 
         <p>
