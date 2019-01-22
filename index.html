@@ -74,9 +74,23 @@
         .mt10 {
             margin-top: 10px;
         }
-        h1 { font-size: 20px; display: flex; align-items: center; justify-content: center; }
+        h1 { 
+            font-size: 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-bottom: 22px; 
+        }
+        @media (min-width: 1366px) {
+            .title iframe {
+                border: none;
+                overflow: hidden;
+                position: absolute;
+                right: 0;
+                top: 53px;
+            }
+        }
         .logo {width: 64px; height: auto; margin-right:10px; }
-        .
         [v-cloak] {display: none}
         iframe {
             max-width: 100%;
@@ -151,17 +165,19 @@
 </div>
 <div class="page-wrap">
     <div style="background-color: rgb(255, 138, 116); height: 8px; position: absolute; top: 0; width: 100%; left: 0;"></div>
-    <h1>
-        <a href="/"><img src="logo.png" alt="logo" class="logo"></a>
-        Learning Languages with Netflix
-    </h1>
+    
+    <div class="title">
+        <h1>
+            <a href="/"><img src="logo.png" alt="logo" class="logo"></a>
+            Learning Languages with Netflix
+        </h1>
 
-    <!-- FB code for like button -->
-     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="360" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-    <!-- FB code end -->
+        <!-- FB code for like button -->
+         <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="360" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <!-- FB code end -->
 
-    <iframe width="728" height="410" src="https://www.youtube.com/embed/pMrWX2dlGIM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+        <iframe width="728" height="410" src="https://www.youtube.com/embed/pMrWX2dlGIM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <div class="text-section">
         <p>LLN is a chrome extension that gives you superpowers over Netflix.</p>
         <p>It makes studying languages with films/series more effective and enjoyable.</p>
