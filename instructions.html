@@ -52,6 +52,22 @@
         text-decoration: none;
         color: black;
     }
+    .main-title {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (min-width: 1100px) {
+        .main-title {
+            flex-direction: row;
+            align-items: center;
+        }
+        .main-title h1 {
+            flex-grow: 1;
+        }
+        .main-title iframe {
+            flex-grow: 0;
+        }
+    }
     .synopsis a {
         text-decoration: none;
         color: black;
@@ -117,13 +133,15 @@
     <div class="page-wrap">
         
     <div style="background-color: rgb(255, 138, 116); height: 8px; position: absolute; top: 0; width: 100%; left: 0;"></div>
-    <h1>
+    <div class="title">
+        <h1>
             <a href="/"><img src="logo.png" alt="logo" class="logo"></a>
             Language Learning with Netflix - Instructions
-    </h1>
-            <!-- FB code for like button -->
-     <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-    <!-- FB code end -->
+        </h1>
+        <!-- FB code for like button -->
+         <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <!-- FB code end -->
+    </div>
 
 <p>Thanks for installing Language Learning with Netflix!</p>
 
