@@ -328,7 +328,7 @@ new Vue({
             if (this.language == 'English' || this.language == 'Japanese') {
                 filename += '_' + this.country;
             }
-            fetch("https://storage.googleapis.com/lln-catalogue/movie-data/" + encodeUriComponent(filename) + ".json").then(function(r){
+            fetch("https://storage.googleapis.com/lln-catalogue/movie-data/" + encodeURIComponent(filename) + ".json").then(function(r){
                 return r.json();
             }).then(function(json){
                 that.movies = json.filter(function(movie){
