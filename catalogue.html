@@ -324,7 +324,11 @@ new Vue({
             this.loading = true;
             this.setHashValue('language', this.language);
             this.setHashValue('country', this.country);
-            fetch("filmdata/" + this.language + ".json").then(function(r){
+            var filename = this.language;
+            if (this.language == 'English' || this.language == 'Japanese') {
+                filename += '_' + this.country;
+            }
+            fetch("https://storage.googleapis.com/lln-catalogue/movie-data/" + encodeUriComponent(filename) + ".json").then(function(r){
                 return r.json();
             }).then(function(json){
                 that.movies = json.filter(function(movie){
