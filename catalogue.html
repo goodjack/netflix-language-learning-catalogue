@@ -135,8 +135,14 @@
         display: flex; 
         align-items: center;
     }
-    h1 span {
+    h1 .date {
         font-family: "Roboto";
+        position: absolute;
+        top: 100%;
+        right: 10px;
+    }
+    h1 .title-span {
+        position: relative;
     }
     .logo {
         width: 48px;
@@ -217,8 +223,10 @@
         <div class="title">
             <h1>
                 <a href="/"><img src="lln-logo-small.png" alt="logo" class="logo"></a>
-                Language Learning with Netflix - Catalogue
-                <span style="color: #ccc; font-size: 12px; margin-left: 25px; font-weight: 400;">Last updated: 26th Feb 2019</span>
+                <span class="title-span">
+                    Language Learning with Netflix - Catalogue
+                    <span class="date" style="color: #ccc; font-size: 12px; margin-left: 25px; font-weight: 400;">Last updated: 26th Feb 2019</span>
+                </span>
             </h1>
             <!-- FB code for like button -->
              <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLanguageLearningWithNetflix&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="330" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
