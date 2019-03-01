@@ -298,7 +298,9 @@ var videoPlayButton,
             video.setAttribute('controls', 'controls')
         }
 	}
-
+video.onplay = function() {
+    videoMethods.hideVideoPlayButton();
+};
 videoMethods.renderVideoPlayButton()
 })();
 </script>
