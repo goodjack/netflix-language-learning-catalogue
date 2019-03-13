@@ -290,7 +290,7 @@
             <th>Title &amp; Synopsis</th>
             <th>Info</th>
             <th>Rating</th>
-            <th>Availability</th>
+            <th v-if="movies[0].countries">Availability</th>
         </tr>
         <tr v-for="movie in movies">
             <td class="center">
@@ -324,7 +324,7 @@
                 <strong class="mb">{{movie.rating || "unknown"}}</strong><br>
                 <span class="small" ng-if="movie.votes">({{movie.votes}} votes)</span>
             </td>
-            <td class="center" :title="movie.countries">
+            <td class="center" :title="movie.countries" v-if="movie.countries">
                 {{(movie.countries || []).length}} countries
             </td>
         </tr>
