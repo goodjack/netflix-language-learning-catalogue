@@ -58,13 +58,15 @@
 	<div style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;">
 		<div v-for="word in textAnnotations"
 			v-if="word.description && word.description.length < 30"
-			style="position: absolute; opacity: .001;" :style="{
+			style="position: absolute; opacity: .2; cursor: pointer; user-select: none;" :style="{
 				left: (Math.min(word.boundingPoly.vertices[0].x, word.boundingPoly.vertices[1].x, word.boundingPoly.vertices[2].x, word.boundingPoly.vertices[3].x)) / 32.16 + '%',
 				top: (Math.min(word.boundingPoly.vertices[0].y, word.boundingPoly.vertices[1].y, word.boundingPoly.vertices[2].y, word.boundingPoly.vertices[3].y)) / 47.86 + '%',
 				width: (Math.max(word.boundingPoly.vertices[0].x, word.boundingPoly.vertices[1].x, word.boundingPoly.vertices[2].x, word.boundingPoly.vertices[3].x) - Math.min(word.boundingPoly.vertices[0].x, word.boundingPoly.vertices[1].x, word.boundingPoly.vertices[2].x, word.boundingPoly.vertices[3].x)) / 32.16 + '%',
 				height: (Math.max(word.boundingPoly.vertices[0].y, word.boundingPoly.vertices[1].y, word.boundingPoly.vertices[2].y, word.boundingPoly.vertices[3].y) - Math.min(word.boundingPoly.vertices[0].y, word.boundingPoly.vertices[1].y, word.boundingPoly.vertices[2].y, word.boundingPoly.vertices[3].y)) / 47.86 + '%',
-				border: '1px solid red'
-				}">{{ word.description }}</div>
+				background: (savedWords['w|'+word.description] ? ['transparent', 'red', 'green', 'grey'][parseInt(savedWords['w|'+word.description])] : 'transparent'),
+				color: 'rgba(0,0,0,0)'
+				}"
+        @click="saveWord(word.description);">{{ word.description }}</div>
 	</div>
 </div>
 
@@ -9992,19 +9994,44 @@
         ]
       }
     }
-  ]
+  ],
+                savedWords: getAllLocalStorage()
 
             },
             created: function () {
 
             },
             methods: {
-                loadLanguageCountry: function() {
-
+                saveWord: function(word) {
+                    console.log('ss', this.savedWords)
+                    let status = this.savedWords['w|' + word];
+                    if (! status) {
+                        status = 1;
+                    } else {
+                        status = (status + 1) % 4;
+                    }
+                    if (!status) {
+                        status = undefined;
+                    }
+                    this.savedWords['w|' + word] = status;
+                    localStorage.setItem('w|' + word, status);
+                    this.$forceUpdate()
                 }
             }
         })
     })();
+
+    function getAllLocalStorage() {
+
+        var archive = {}, // Notice change here
+            keys = Object.keys(localStorage),
+            i = keys.length;
+
+        while ( i-- ) {
+            archive[ keys[i] ] = localStorage.getItem( keys[i] );
+        }
+        return archive;
+    }
 </script>
 </body>
 </html>
