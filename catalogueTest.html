@@ -73,13 +73,18 @@
         padding-top: 25px;
         flex-wrap: wrap;
     }
+    .filter {
+        display: inline-block;
+        margin-top: 10px;
+    }
     .filters label {
         font-weight: bold;
     }
     .multiselect {
         margin-right: 25px;
-        margin-left: 10px;
+        margin-left: 5px;
         width: 180px;
+        display: inline-block;
     }
     .results-count {
         margin-left: 14px;
@@ -276,24 +281,26 @@
 </p>
     </div>
     <div class="filters" v-cloak>
-        <label>
-        Language you study:
-        </label>
+        <span class="filter">
+            <label>Language you study:</label>
             <vue-multiselect v-model="language" :show-labels="false" :allow-empty="false" @input="loadLanguageCountry()" :options="languages"></vue-multiselect>
-        <label>Your Netflix country:</label>
-        <vue-multiselect v-model="country" track-by="val" label="name" :show-labels="false" :allow-empty="false" @input="loadLanguageCountry()" :options="dropdownCountries"></vue-multiselect>
+        </span>
+        <span class="filter">
+            <label>Your Netflix country:</label>
+            <vue-multiselect v-model="country" track-by="val" label="name" :show-labels="false" :allow-empty="false" @input="loadLanguageCountry()" :options="dropdownCountries"></vue-multiselect>
+        </span>
 
         <div class="results-count">
             <span v-if="movies.length" style="color: #666;">
                 Found {{movies.length + (movies.length == 1000 ? '+' : '') }} titles
             </span>
-            <span v-if="!loading && movies.length == 0" style="color: red;">
-                Couldn't find any titles for selected language and country
-            </span>
             <span v-if="loading && movies.length == 0" style="color: gray;">
                 Loading...
             </span>
         </div>
+    </div>
+    <div v-if="!loading && movies.length == 0" style="color: red; margin-top: 40px;">
+        Couldn't find any titles for selected language and country
     </div>
     <div style="margin-bottom: 10px; color: rgb(219, 68, 55);" v-cloak v-if="country && country.val && movies.length && goodCountries.indexOf(country.val) == -1">
         Some of the listed items may no longer be available in your country. :-/ We are working on improving the data.
