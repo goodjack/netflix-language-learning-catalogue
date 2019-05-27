@@ -458,7 +458,7 @@
         var numVisits = parseInt(localStorage.getItem('numVisits') || 0) + 1;
         localStorage.setItem('numVisits', numVisits);
 
-        if (numVisits === 5 || numVisits === 8) {
+        if (numVisits === 8) {
             document.getElementById("rateMe").style.display = 'block';
         }
     })();
