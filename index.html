@@ -179,6 +179,16 @@
 	    font-size: 18px;
 	    font-weight: 300;
         }
+	    .button {
+		  padding: 9px 19px;  
+	    }
+        .button-raised {
+	    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    	    padding: 9px 19px;
+	}
+	    .button:hover {
+		    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+	    }
         .top-nav a {
             text-decoration: none;
             margin: 8px 12px;
@@ -303,7 +313,7 @@
     </div>
     
     <nav class="top-nav">
-      <a style="text-decoration: none;" href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm" style="text-decoration: underline; font-weight: 900;">
+      <a class="button-raised" href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm" style="text-decoration: underline; font-weight: 900;">
 	      <span style="text-decoration: underline;">Install</span>
 	      <svg style="position: relative; left: 2px; top: 1px; opacity: .7;" width="14px" height="14px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	    <g id="external_link" class="icon_svg-stroke" stroke="#666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
@@ -312,8 +322,8 @@
 	    </g>
 	</svg>
       </a>
-      <a href="/catalogue.html">Catalogue</a>
-      <a href="/instructions.html">Instructions</a>
+      <a class="button" href="/catalogue.html">Catalogue</a>
+      <a class="button" href="/instructions.html">Instructions</a>
     </nav>
 	
 	<style>
