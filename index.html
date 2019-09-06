@@ -441,8 +441,16 @@
 				return this.translations[key][this.lang] || this.translations[key]['en'];
 			}
 		},
+		created: function(){
+			let lang = navigator.language;
+			if (this.translations.install[lang]) {
+				this.lang = lang;
+			} else {
+				this.lang = lang.split('-')[0];
+			}
+		},
 		data: {
-			lang: navigator.language,
+			lang: 'en',
 			translations: {
 				'install': {
 					'en': 'Install',
