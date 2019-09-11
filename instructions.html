@@ -138,7 +138,7 @@
     <div v-if="showConfig" style="text-align: center;">
         <h1 style="text-align: center; display: block; color: #c3819c;">{{translate('llnTitle')}}</h1>
         <p style="text-align: center; margin-top: 60px;">{{translate('selectNativeLang')}}</p>
-        <vue-multiselect style="width: 290px; margin: 0 auto;" v-model="nativeLangCode_G" track-by="val" label="name" :show-labels="false" :allow-empty="false" :options="nativeLangCodes_G" @input="setUiLang()"></vue-multiselect>
+        <vue-multiselect style="width: 290px; margin: 0 auto;" v-model="nativeLangCode_G" track-by="val" label="name" :show-labels="false" :allow-empty="false" :options="nativeLangCodes_G"></vue-multiselect>
         <span class="button-raised" style="margin: 45px auto; padding: 12px 30px" @click="doContinue()">{{translate('continue')}}</span>
     </div>
     <div v-if="showSetupComplete" style="text-align: center; padding: 0 30px 30px; max-width: 600px; margin: 0 auto; ">
@@ -258,10 +258,9 @@
         el: '#app',
         created: function(){
             updateFontSize();
-
-
+            
             // try get ui and dropdown lang from hash, or navigator.language
-            let lang = this.getHashValue('lang') || navigator.language;
+            let lang = navigator.language;
             let langObj = this.nativeLangCodes_G.filter(o => o.val === lang);
             if (!langObj || !langObj.length) {
                 langObj = this.nativeLangCodes_G.filter(o => o.val === lang.split('-')[0]);
@@ -281,10 +280,6 @@
         methods: {
             translate: function (key) {
                 return this.translations[key][this.lang] || this.translations[key]['en'];
-            },
-            setUiLang: function(){
-                this.lang = this.nativeLangCode_G.val;
-                this.setHashValue('lang', this.lang);
             },
             doContinue: function(){
                 document.cookie = "nativeLangCode_G" + "=" + this.nativeLangCode_G.val + "; path=/; expires=2147483647";
