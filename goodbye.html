@@ -1,7 +1,7 @@
 <html>
 <head></head>
 <body>
-Sorry to see you go. :(
+Extension uninstalled. Sorry to see you go. :(
 <script>
 function getHashValue(key) {
   var matches = location.hash.match(new RegExp(key+'=([^&]*)'));
@@ -21,7 +21,7 @@ async function sendUninstallEvent(diocoId) {
 let diocoId = getHashValue('diocoId');
 if (diocoId) {
   sendUninstallEvent(diocoId).then(function(){
-    close();
+    // do nothing
   });
 }
 
