@@ -13,7 +13,7 @@ async function sendUninstallEvent(diocoId) {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({event: 'extension_uninstalled', data: {diocoId: diocoId}}) // todo
+    body: JSON.stringify({data: {event: 'extension_uninstalled', data: {diocoId: diocoId}}})
   });
   return await response.json(); // parses JSON response into native JavaScript objects
 }
