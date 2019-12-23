@@ -375,7 +375,7 @@
                     </div>
                 </td>
                 <td class="center">
-                    <div class="mb"><strong>Genre: </strong><span v-for="(genre, index) in movie.genre.split(', ')" @click="filter(genre)" class="genre" :class="{active: filterBy === genre}" title="Click to filter by"><span v-if="index > 0">, </span>{{genre}}</span> <br></div>
+                    <div class="mb"><strong>Genre: </strong><span v-for="(genre, index) in (movie.genre || '').split(', ')" @click="filter(genre)" class="genre" :class="{active: filterBy === genre}" title="Click to filter by"><span v-if="index > 0">, </span>{{genre}}</span> <br></div>
                     <div class="mb"><strong><span class="sorter" @click="sort('released')" :class="{desc: sortBy === 'released'}"  title="Click to sort by">Released: </span></strong>{{movie.released}} <br></div>
                     <div class="mb"><strong>Runtime: </strong>{{movie.runtime}}</div>
                 </td>
