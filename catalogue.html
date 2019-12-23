@@ -351,7 +351,7 @@
                 <th><span class="sorter" @click="sort('rating')" :class="{desc: sortBy === 'rating'}" title="Click to sort by">Rating</span></th>
                 <th v-if="movies[0].countries">Availability</th>
             </tr>
-            <tr v-for="movie in movies" v-if="!filterBy || (movie.genre || '').indexOf(filterBy) > -1">
+            <tr v-for="movie in movies" v-if="!filterBy || (movie.genre || 'unknown').indexOf(filterBy) > -1">
                 <td class="center">
                     <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
                         <div class="img-wrap">
