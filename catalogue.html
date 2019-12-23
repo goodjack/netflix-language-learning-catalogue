@@ -171,6 +171,38 @@
             position: relative;
             top: 3px;
         }
+        .sorter {
+            cursor: pointer;
+        }
+        .sorter.desc:before {
+            content: '▼';
+            margin-right: 4px;
+        }
+        .filters2 {
+            margin-bottom: 10px;
+        }
+        .filter-info {
+            background: #ddd;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 3px 8px;
+        }
+        .filter-info b {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .genre {
+            cursor: pointer;
+        }
+        .genre:hover {
+            color: #c55;
+        }
+        .genre:hover span {
+            color: #000;
+        }
+        .genre.active {
+            font-weight: bold;
+        }
         [v-cloak] {display: none; }
     </style>
 
@@ -309,15 +341,16 @@
         <div style="margin-bottom: 10px; color: rgb(219, 68, 55);" v-cloak v-if="country && country.val && movies.length && goodCountries.indexOf(country.val) == -1">
             Some of the listed items may no longer be available in your country. :-/ We are working on improving the data.
         </div>
+        <div class="filters2"><span class="filter-info" v-if="filterBy.length">Filter: {{filterBy}}<b @click="filter('')">x</b></span></div>
         <table v-if="movies.length" v-cloak>
             <tr>
                 <th>Image</th>
                 <th>Title &amp; Synopsis</th>
                 <th>Info</th>
-                <th>Rating</th>
+                <th><span class="sorter" @click="sort('rating')" :class="{desc: sortBy === 'rating'}">Rating</span></th>
                 <th v-if="movies[0].countries">Availability</th>
             </tr>
-            <tr v-for="movie in movies">
+            <tr v-for="movie in movies" v-if="!filterBy || movie.genre.indexOf(filterBy) > -1">
                 <td class="center">
                     <a :href="'https://www.netflix.com/watch/' + movie.netflixid">
                         <div class="img-wrap">
@@ -341,8 +374,8 @@
                     </div>
                 </td>
                 <td class="center">
-                    <div class="mb"><strong>Genre: </strong>{{movie.genre || "unknown"}} <br></div>
-                    <div class="mb"><strong>Released: </strong>{{movie.released}} <br></div>
+                    <div class="mb"><strong>Genre: </strong><span v-for="(genre, index) in movie.genre.split(', ')" @click="filter(genre)" class="genre" :class="{active: filterBy === genre}"><span v-if="index > 0">, </span>{{genre}}</span> <br></div>
+                    <div class="mb"><strong><span class="sorter" @click="sort('released')" :class="{desc: sortBy === 'released'}">Released: </span></strong>{{movie.released}} <br></div>
                     <div class="mb"><strong>Runtime: </strong>{{movie.runtime}}</div>
                 </td>
                 <td class="center">
@@ -374,7 +407,9 @@
                 languages: ["Arabic","Basque","Bengali","Catalan","Chinese (Mandarin)","Croatian","Czech","Danish","Dutch","English","Filipino","Finnish","French","Georgian","German","Hebrew","Hindi","Icelandic","Indonesian","Italian","Japanese","Korean","Malay","Norwegian","Polish","Portuguese","Romanian","Russian","Spanish","Swedish","Tamil","Thai","Turkish","Vietnamese"],
                 countries: ["Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bonaire, Sint Eustatius and Saba","Bosnia and Herzegovina","Botswana","Brazil","British Indian Ocean Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Cayman Islands","Central African Republic","Chad","Chile","Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo, the Democratic Republic of the","Cook Islands","Costa Rica","Cote dIvoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and McDonald Islands","Holy See","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Lao Peoples Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macao","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mexico","Micronesia","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine, State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Republic of the Congo","Romania","Russia","Rwanda","Reunion","Saint Barthelemy","Saint Helena","Saint Kitts and Nevis","Saint Lucia","Saint Martin","Saint Pierre and Miquelon","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Sint Maarten (Dutch part)","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Swaziland","Sweden","Switzerland","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe"],
                 loading: true,
-                goodCountries: ["Argentina","Australia","Belgium","Brazil","Canada","Czech Republic","France","Germany","Greece","Hong Kong","Hungary","India","Israel","Italy","Japan","Lithuania","Mexico","Netherlands","Poland","Romania","Russia","Singapore","Slovakia","South Korea","Spain","Sweden","Switzerland","Thailand","United Kingdom","United States"]
+                goodCountries: ["Argentina","Australia","Belgium","Brazil","Canada","Czech Republic","France","Germany","Greece","Hong Kong","Hungary","India","Israel","Italy","Japan","Lithuania","Mexico","Netherlands","Poland","Romania","Russia","Singapore","Slovakia","South Korea","Spain","Sweden","Switzerland","Thailand","United Kingdom","United States"],
+                sortBy: '',
+                filterBy: ''
             },
             created: function () {
                 var language = this.getHashValue('language');
@@ -393,6 +428,7 @@
                 loadLanguageCountry: function() {
                     var that = this;
                     this.movies = [];
+                    this.sortBy = '';
                     this.loading = true;
                     this.setHashValue('language', this.language);
                     this.setHashValue('country', this.country.val);
@@ -447,6 +483,11 @@
                     }
 
                     document.location.hash = '#' + kvp.join('&');
+                }, sort: function(sortBy) {
+                    this.sortBy = sortBy;
+                    this.movies.sort((a, b) => parseFloat(b[this.sortBy]) - parseFloat(a[this.sortBy]));
+                }, filter: function(genre) {
+                    this.filterBy = this.filterBy === genre ? '' : genre;
                 }
             }
         })
