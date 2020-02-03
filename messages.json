@@ -1,11 +1,11 @@
 {
-  "youtube": {
+  "YOUTUBE": {
     "message": "Test youtube message on github",
     "color": "red",
     "link": "http://languagelearningwithnetflix.com/",
     "showErrorIcon": true
   },
-  "netflix": {
+  "NETFLIX": {
     "message": "Test netflix message on github",
     "color": "red",
     "link": "http://languagelearningwithnetflix.com/",
