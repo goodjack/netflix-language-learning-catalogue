@@ -10,7 +10,7 @@
     "message": "Test netflix message on github",
     "color": "red",
     "link": "http://languagelearningwithnetflix.com/",
-    "showErrorIcon": true,
+    "showErrorIcon": false,
     "showNewIcon": false
   }
 }
