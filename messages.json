@@ -3,12 +3,14 @@
     "message": "Test youtube message on github",
     "color": "red",
     "link": "http://languagelearningwithnetflix.com/",
-    "showErrorIcon": true
+    "showErrorIcon": true,
+    "showNewIcon": false,
   },
   "NETFLIX": {
     "message": "Test netflix message on github",
     "color": "red",
     "link": "http://languagelearningwithnetflix.com/",
-    "showErrorIcon": true
+    "showErrorIcon": true,
+    "showNewIcon": false,
   }
 }
