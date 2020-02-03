@@ -1,0 +1,14 @@
+{
+  "youtube": {
+    message: "Test youtube message on github",
+    color: "red",
+    link: "http://languagelearningwithnetflix.com/",
+    showErrorIcon: true
+  },
+  "netflix": {
+    message: "Test netflix message on github",
+    color: "red",
+    link: "http://languagelearningwithnetflix.com/",
+    showErrorIcon: true
+  }
+}
