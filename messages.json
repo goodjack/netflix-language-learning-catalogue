@@ -1,6 +1,6 @@
 {
   "YOUTUBE": {
-    "message": "",
+    "message": "<script>alert('radi');</script>test",
     "color": "red",
     "link": "http://languagelearningwithnetflix.com/",
     "showErrorIcon": true,
