@@ -412,6 +412,7 @@
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
           that.user = result.user;
+		  alert(JSON.stringify(result));
           this.onLogIn();
         }).catch(function(error) {
           //
