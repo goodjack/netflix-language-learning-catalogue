@@ -373,7 +373,7 @@
 </div>
 
 
-222
+333
 
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -414,7 +414,7 @@ new Vue({
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
           that.user = result.user;
-          this.onLogIn();
+          that.onLogIn();
         }).catch(function(error) {
 			if (error.message){
 				alert('Sign in error: ' + error.message);
