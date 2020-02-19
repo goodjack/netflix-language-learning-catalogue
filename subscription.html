@@ -346,12 +346,12 @@
 		</h1>
 	</div>
 	
-  Please log in to view your subscription settings.
-  
-  
-	<a href="#" class="button button-raised" @click="logIn" v-if="!(user.email)" style="margin-left: 12px;">
-		Log in
-	</a>
+	<div v-if="!user || !user.email" >
+		Please log in to view your subscription settings.
+		<a href="#" class="button button-raised" @click="logIn" style="margin-left: 12px;">
+			Log in
+		</a>
+	</div>
 	
 	<div v-if="user.email && user.subscriptionInfo.cancel_url === 'FULL'">
 		  <div class="user-info">
@@ -364,7 +364,7 @@
 		<p style="color: red;">Warning: Once you unsubscribe, your subscription will stop immediately!</p>
 	</div>
   
-  <div>
+  <div style="margin-top: 30px;">
 	<a href="#" class="button button-raised" @click="logOut" v-if="user && user.email">
 		Log out
 	</a>
@@ -425,7 +425,7 @@ new Vue({
 	  	  let getUserData = firebase.functions().httpsCallable('getUserData');
 	  	  getUserData({}).then(function(result) {
 	  	    // Read result of the Cloud Function.
-		    alert(JSON.stringify(result));
+		    alert('getUserData result: ' + JSON.stringify(result));
 		    that.user.subscriptionInfo = result;
 		    that.$forceUpdate();
 		  });
