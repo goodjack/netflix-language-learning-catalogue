@@ -419,7 +419,7 @@
     </div>
     <div v-if="loaded">
         <div v-if="!user || !user.email">
-            Please log in to view your subscription settings.<br><br>
+	    <div style="margin-bottom: 35px;">Please log in to view your subscription settings.</div>
             <a href="#" class="button button-raised" @click="logIn" style="margin-left: 12px;">
 		    <b>Log in</b>
             </a>
