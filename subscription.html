@@ -419,14 +419,15 @@
     </div>
     <div v-if="loaded">
         <div v-if="!user || !user.email">
-            Please log in to view your subscription settings.
+            Please log in to view your subscription settings.<br><br>
             <a href="#" class="button button-raised" @click="logIn" style="margin-left: 12px;">
-                Log in
+		    <b>Log in</b>
             </a>
         </div>
 
         <div v-if="user && user.email && !(user && user.subscriptionInfo && user.subscriptionInfo.cancel_url)">
-            You are not subscribed to LLN Pro. 
+            You are not subscribed to LLN Pro. <br>
+	    Please subscribe in the extension.
         </div>
 
         <div v-if="user && user.subscriptionInfo && user.subscriptionInfo.cancel_url">
