@@ -373,7 +373,7 @@
 </div>
 
 
-
+1
 
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -426,7 +426,7 @@ new Vue({
 	  	  getUserData({}).then(function(result) {
 	  	    // Read result of the Cloud Function.
 		    alert('getUserData result: ' + JSON.stringify(result));
-		    that.user.subscriptionInfo = result;
+		    that.user.subscriptionInfo = result.data;
 		    that.$forceUpdate();
 		  });
 		  
