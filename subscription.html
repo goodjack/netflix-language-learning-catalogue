@@ -399,8 +399,8 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
 
 <script>
-	var functions = firebase.functions();
-	new Vue({
+var functions = firebase.functions();
+new Vue({
 		el: '#app',
 		methods: {
 			translate: function (key) {
@@ -426,129 +426,131 @@
 	  	  getUserData({}).then(function(result) {
 	  	    // Read result of the Cloud Function.
 		    alert(JSON.stringify(result));
-		    this.user.subscriptionInfo = result.data;
-		    this.$forceUpdate();
+		    that.user.subscriptionInfo = result.data;
+		    that.$forceUpdate();
 		  });
 		  
 	  },
       logOut: function(e) {
-        e.preventDefault();
-        firebase.auth().signOut().then(function() {
-          // Sign-out successful.
-        }).catch(function(error) {
-          // An error happened.
-        });
-      }
-		},
-		created: function(){
-			let lang = navigator.language;
-			if (this.translations.install[lang]) {
-				this.lang = lang;
-			} else {
-				this.lang = lang.split('-')[0];
-			}
-      
-      firebase.auth().onAuthStateChanged(function(user) {
-          this.user = user; 
-		  if (user && user.email) { // logged in
-			this.onLogIn();
+		e.preventDefault();
+		firebase.auth().signOut().then(function() {
+		  // Sign-out successful.
+		}).catch(function(error) {
+		  // An error happened.
+		});
+	  }
+	},
+	created: function(){
+		  let that = this;
+		  
+		  let lang = navigator.language;
+		  if (this.translations.install[lang]) {
+			this.lang = lang;
 		  } else {
-			alert('logged out event');
-			this.user = null;
+			this.lang = lang.split('-')[0];
 		  }
-		  this.$forceUpdate();
-          //if (user) {
-            // User is signed in.
-            //var displayName = user.displayName;
-            //var email = user.email;
-            //var emailVerified = user.emailVerified;
-            //var photoURL = user.photoURL;
-            //var isAnonymous = user.isAnonymous;
-            //var uid = user.uid;
-            //var providerData = user.providerData;
-          //} else {
-            // User is signed out.
-            // ...
-          //}
-      });
-		},
-		data: {
-      user: {},
-			lang: 'en',
-			translations: {
-				'install': {
-					'en': 'Install',
-					'ko': '설치',
-					'zh-TW': '安裝',
-					'ja': 'インストール',
-					'th': 'ติดตั้ง'
-				},
-				'catalogue': {
-					'en': 'Catalogue',
-					'ko': '카테고리',
-					'zh-TW': '目錄',
-					'ja': 'カタログ',
-					'th': 'หมวดหมู่'
-				},
-				'instructions': {
-					'en': 'Instructions',
-					'ko': '지침',
-					'zh-TW': '說明',
-					'ja': '説明書',
-					'th': 'คำแนะนำ'
-				},
-				'llnIntro': {
-					'en': 'LLN is a Chrome extension that gives you superpowers over Netflix. It makes studying languages with films/series more effective and enjoyable.',
-					'ko': 'LLN은 Netflix가 드리는 강력한 크롬 익스텐션입니다. 이 앱은 영화/시리즈와 함께 더욱 효과적이고 즐겁게 언어를 배울 수 있도록 해줍니다.',
-					'zh-TW': 'LLN是一款Chrome擴展程式，可讓您在Netflix上擁有超能力。它使得藉由電影/連續劇學習語言更加高效和愉快。',
-					'ja': 'LLNは、Netflixでスーパーパワーを発揮するChrome拡張機能です。映画/TVシリーズで言語をより効果的かつ楽しく学べます。',
-					'th': 'LLN เป็นส่วนขยาย Chrome ที่มอบสุดยอดพลังให้แก่ Netflix มันทำให้การเรียนรู้ภาษาด้วยภาพยนตร์/ซีรีส์เป็นไปอย่างมีประสิทธิภาพมากยิ่งขึ้นและเพลิดเพลินได้'
-				},
-				'improvingText': {
-					'en': 'We are still improving the extension. To suggest a feature or report an issue, please visit our <a href="https://forum.languagelearningwithnetflix.com/" target="_blank">forum</a>. Or <a href="mailto:LanguageLearningExtension@gmail.com">write to us</a>.',
-					'ko': ' ',
-					'zh-TW': ' ',
-					'ja': ' ',
-					'th': ' '
-				},
-				'catalogueText': {
-					'en': 'See our <a href="catalogue.html">special catalogue</a> for recommendations for films/series to study with.',
-					'ko': '함께 배울 수 있는 영화/시리즈를 위해 저희가 추천하는 <a href="catalogue.html">특별 카탈로그</a>를 참조하세요.',
-					'zh-TW': '請參閱我們的<a href="catalogue.html">特別目錄</a>，獲取針對您要學習的電影/連續劇的建議。',
-					'ja': '学習用にお勧めの映画/TVシリーズについては、<a href="catalogue.html">特別カタログ</a>をご覧ください。',
-					'th': 'ดู <a href="catalogue.html">หมวดหมู่พิเศษ</a> ของเราสำหรับการแนะนำภาพยนตร์/ซีรีส์เพื่อการเรียนรู้'
-				},
-				'instructionsText': {
-					'en': 'Check out the <a href="instructions.html">instructions for use</a> for more study tips.',
-					'ko': '더 많은 학습 팁을 보시려면 <a href="instructions.html">사용 지침</a>을 확인해 보세요.',
-					'zh-TW': '請查看<a href="instructions.html">使用說明</a>，獲取更多的學習提示。',
-					'ja': 'その他の学習のヒントについては、<a href="instructions.html">使用説明書</a>をご覧ください。',
-					'th': 'ตรวจสอบ <a href="instructions.html">คำแนะนำสำหรับการใช้</a> สำหรับเคล็ดลับในการเรียนรู้เพิ่มเติม'
-				},
-				'fbText': {
-					'en': 'Our <a href="https://www.facebook.com/LanguageLearningWithNetflix">facebook page</a> has the latest news/updates about the extension.',
-					'ko': ' ',
-					'zh-TW': ' ',
-					'ja': ' ',
-					'th': ' '
-				},
-				'backgroundInfoText': {
-					'en': 'Here is some more <a href="https://languagelearningwithnetflix.com/interview.html">background information</a> about our project.',
-					'ko': ' ',
-					'zh-TW': ' ',
-					'ja': ' ',
-					'th': ' '
-				},
-				'manageSubscription': {
-					'en': 'Manage Subscription',
-					'ko': '구독 관리',
-					'zh-TW': '訂閱管理',
-					'ja': '購読を管理する',
-					'th': 'จัดการแผนสมาชิก'
-				}
+  
+		  firebase.auth().onAuthStateChanged(function(user) {
+			  that.user = user; 
+			  if (user && user.email) { // logged in
+				that.onLogIn();
+			  } else {
+				alert('logged out event');
+				that.user = null;
+			  }
+			  that.$forceUpdate();
+			  //if (user) {
+				// User is signed in.
+				//var displayName = user.displayName;
+				//var email = user.email;
+				//var emailVerified = user.emailVerified;
+				//var photoURL = user.photoURL;
+				//var isAnonymous = user.isAnonymous;
+				//var uid = user.uid;
+				//var providerData = user.providerData;
+			  //} else {
+				// User is signed out.
+				// ...
+			  //}
+		  });
+	},
+	data: {
+  user: {},
+		lang: 'en',
+		translations: {
+			'install': {
+				'en': 'Install',
+				'ko': '설치',
+				'zh-TW': '安裝',
+				'ja': 'インストール',
+				'th': 'ติดตั้ง'
+			},
+			'catalogue': {
+				'en': 'Catalogue',
+				'ko': '카테고리',
+				'zh-TW': '目錄',
+				'ja': 'カタログ',
+				'th': 'หมวดหมู่'
+			},
+			'instructions': {
+				'en': 'Instructions',
+				'ko': '지침',
+				'zh-TW': '說明',
+				'ja': '説明書',
+				'th': 'คำแนะนำ'
+			},
+			'llnIntro': {
+				'en': 'LLN is a Chrome extension that gives you superpowers over Netflix. It makes studying languages with films/series more effective and enjoyable.',
+				'ko': 'LLN은 Netflix가 드리는 강력한 크롬 익스텐션입니다. 이 앱은 영화/시리즈와 함께 더욱 효과적이고 즐겁게 언어를 배울 수 있도록 해줍니다.',
+				'zh-TW': 'LLN是一款Chrome擴展程式，可讓您在Netflix上擁有超能力。它使得藉由電影/連續劇學習語言更加高效和愉快。',
+				'ja': 'LLNは、Netflixでスーパーパワーを発揮するChrome拡張機能です。映画/TVシリーズで言語をより効果的かつ楽しく学べます。',
+				'th': 'LLN เป็นส่วนขยาย Chrome ที่มอบสุดยอดพลังให้แก่ Netflix มันทำให้การเรียนรู้ภาษาด้วยภาพยนตร์/ซีรีส์เป็นไปอย่างมีประสิทธิภาพมากยิ่งขึ้นและเพลิดเพลินได้'
+			},
+			'improvingText': {
+				'en': 'We are still improving the extension. To suggest a feature or report an issue, please visit our <a href="https://forum.languagelearningwithnetflix.com/" target="_blank">forum</a>. Or <a href="mailto:LanguageLearningExtension@gmail.com">write to us</a>.',
+				'ko': ' ',
+				'zh-TW': ' ',
+				'ja': ' ',
+				'th': ' '
+			},
+			'catalogueText': {
+				'en': 'See our <a href="catalogue.html">special catalogue</a> for recommendations for films/series to study with.',
+				'ko': '함께 배울 수 있는 영화/시리즈를 위해 저희가 추천하는 <a href="catalogue.html">특별 카탈로그</a>를 참조하세요.',
+				'zh-TW': '請參閱我們的<a href="catalogue.html">特別目錄</a>，獲取針對您要學習的電影/連續劇的建議。',
+				'ja': '学習用にお勧めの映画/TVシリーズについては、<a href="catalogue.html">特別カタログ</a>をご覧ください。',
+				'th': 'ดู <a href="catalogue.html">หมวดหมู่พิเศษ</a> ของเราสำหรับการแนะนำภาพยนตร์/ซีรีส์เพื่อการเรียนรู้'
+			},
+			'instructionsText': {
+				'en': 'Check out the <a href="instructions.html">instructions for use</a> for more study tips.',
+				'ko': '더 많은 학습 팁을 보시려면 <a href="instructions.html">사용 지침</a>을 확인해 보세요.',
+				'zh-TW': '請查看<a href="instructions.html">使用說明</a>，獲取更多的學習提示。',
+				'ja': 'その他の学習のヒントについては、<a href="instructions.html">使用説明書</a>をご覧ください。',
+				'th': 'ตรวจสอบ <a href="instructions.html">คำแนะนำสำหรับการใช้</a> สำหรับเคล็ดลับในการเรียนรู้เพิ่มเติม'
+			},
+			'fbText': {
+				'en': 'Our <a href="https://www.facebook.com/LanguageLearningWithNetflix">facebook page</a> has the latest news/updates about the extension.',
+				'ko': ' ',
+				'zh-TW': ' ',
+				'ja': ' ',
+				'th': ' '
+			},
+			'backgroundInfoText': {
+				'en': 'Here is some more <a href="https://languagelearningwithnetflix.com/interview.html">background information</a> about our project.',
+				'ko': ' ',
+				'zh-TW': ' ',
+				'ja': ' ',
+				'th': ' '
+			},
+			'manageSubscription': {
+				'en': 'Manage Subscription',
+				'ko': '구독 관리',
+				'zh-TW': '訂閱管理',
+				'ja': '購読を管理する',
+				'th': 'จัดการแผนสมาชิก'
 			}
 		}
-	});
+	}
+});
 </script>
 
 </body>
