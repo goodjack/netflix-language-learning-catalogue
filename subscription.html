@@ -364,7 +364,7 @@
 		<p style="color: red;">Warning: Once you unsubscribe, your subscription will stop immediately!</p>
 	</div>
   
-  <a href="#" class="button button-raised" @click="logOut" v-if="user.email">
+  <a href="#" class="button button-raised" @click="logOut" v-if="user && user.email">
 		Log out
 	</a>
 
@@ -426,7 +426,7 @@ new Vue({
 	  	  getUserData({}).then(function(result) {
 	  	    // Read result of the Cloud Function.
 		    alert(JSON.stringify(result));
-		    that.user.subscriptionInfo = result.data;
+		    that.user.subscriptionInfo = result;
 		    that.$forceUpdate();
 		  });
 		  
