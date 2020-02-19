@@ -359,7 +359,7 @@
 			<p><b>Email:</b>{{ user.email }}</p>
 		  </div>
 		  <div style="padding: 20px 0;">
-			<a :href="((user || {}).subscriptionInfo || {}).cancel_url" target="_blank" class="button button-raised" style="background-color: #b84b4b; color: #fff;">
+			<a :href="((user || {}).subscriptionInfo || {}).cancel_url" class="button button-raised" style="background-color: #b84b4b; color: #fff;">
 				Cancel Subscription
 			</a>
 			<p style="color: rgb(184, 75, 75);" style="margin-top: 10px;">Warning: Once you unsubscribe, your subscription stops immediately!</p>
