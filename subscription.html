@@ -415,7 +415,8 @@
 		  alert(JSON.stringify(result));
           this.onLogIn();
         }).catch(function(error) {
-          //
+          alert('Sign in error');
+		  alert(JSON.stringify(error));
         });
       },
 	  onLogIn: function() {
