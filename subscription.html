@@ -353,11 +353,18 @@
     <p><b>Email:</b>{{ user.email }}</p>
   </div>
   
-	<a class="button" @click="logIn" v-if="!(user.email)">
+	<a href="#" class="button" @click="logIn" v-if="!(user.email)">
 		Log in
 	</a>
+	
+	<div v-if="user.email && user.subscriptionInfo.cancel_url === 'FULL'">
+		<a :href="user.subscriptionInfo.cancel_url" target="_blank" class="button">
+			Cancel Subscription
+		</a>
+		<p style="color: red;">Warning: Once you unsubscribe, your subscription will stop immediately!</p>
+	</div>
   
-  <a class="button" @click="logOut" v-if="user.email">
+  <a href="#" class="button" @click="logOut" v-if="user.email">
 		Log out
 	</a>
 
@@ -369,9 +376,8 @@
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-functions.js"></script>
 
 <script>
   // Your web app's Firebase configuration
@@ -393,6 +399,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
 
 <script>
+	var functions = firebase.functions();
 	new Vue({
 		el: '#app',
 		methods: {
@@ -428,8 +435,23 @@
 			}
       
       firebase.auth().onAuthStateChanged(function(user) {
-          this.user = user;
-          this.$forceUpdate();
+          this.user = user; 
+		  if (user && user.email) { // logged in
+			alert('logged in event');
+		    let getUserData = firebase.functions().httpsCallable('getUserData');
+			getUserData({}).then(function(result) {
+			  // Read result of the Cloud Function.
+			  alert(JSON.stringify(result));
+			  this.user.subscriptionInfo = result.data;
+			  this.$forceUpdate();
+			});
+			this.$forceUpdate();
+		  } else {
+			alert('logged out event');
+			this.user = null;
+			this.$forceUpdate();
+			  
+		  }
           //if (user) {
             // User is signed in.
             //var displayName = user.displayName;
