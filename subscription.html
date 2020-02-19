@@ -373,7 +373,7 @@
 </div>
 
 
-333
+444
 
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -424,12 +424,14 @@ new Vue({
       },
 	  onLogIn: function() {
 		  let that = this;
-	  	  let getUserData = firebase.functions().httpsCallable('getUserData');
-	  	  getUserData({}).then(function(result) {
-	  	    // Read result of the Cloud Function.
-		    that.user.subscriptionInfo = result.data;
-		    that.$forceUpdate();
-		  });
+		  if (that.user) {
+			  let getUserData = firebase.functions().httpsCallable('getUserData');
+			  getUserData({}).then(function(result) {
+				// Read result of the Cloud Function.
+				that.user.subscriptionInfo = result.data;
+				that.$forceUpdate();
+			  });
+		  }
 		  
 	  },
       logOut: function(e) {
