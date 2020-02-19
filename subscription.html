@@ -431,7 +431,6 @@ new Vue({
 			  getUserData({}).then(function(result) {
 				// Read result of the Cloud Function.
 				that.user.subscriptionInfo = result.data;
-				alert(that.user.subscriptionInfo.cancel_url);
 				that.$forceUpdate();
 			  });
 		  }
