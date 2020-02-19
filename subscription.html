@@ -353,10 +353,14 @@
 		</a>
 	</div>
 	
+	<div v-if="user && user.email && !(user && user.subscriptionInfo && user.subscriptionInfo.cancel_url)">
+		You are not subscribed to LLN Pro
+	</div>
+	
 	<div v-if="user && user.subscriptionInfo && user.subscriptionInfo.cancel_url">
 		  <div class="user-info">
 			<h4>User info:</h4>
-			<p><b>Email:</b>{{ user.email }}</p>
+			<p><b>Email:</b> {{ user.email }}</p>
 		  </div>
 		  <div style="padding: 20px 0;">
 			<a :href="((user || {}).subscriptionInfo || {}).cancel_url" class="button button-raised" style="background-color: #b84b4b; color: #fff;">
