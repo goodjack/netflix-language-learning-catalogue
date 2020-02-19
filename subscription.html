@@ -491,7 +491,6 @@
                 firebase.auth().signInWithPopup(provider).then(function (result) {
                     that.user = result.user;
                     that.onLogIn();
-                    that.loaded = true;
                 }).catch(function (error) {
                     if (error.message) {
                         alert('Sign in error: ' + error.message);
@@ -506,9 +505,12 @@
                     getUserData({}).then(function (result) {
                         // Read result of the Cloud Function.
                         that.user.subscriptionInfo = result.data;
+                        that.loaded = true;
                         that.$forceUpdate();
                     });
-                }
+                } else {
+					that.loaded = true;
+				}
 
             },
             logOut: function (e) {
@@ -532,11 +534,11 @@
 
             firebase.auth().onAuthStateChanged(function (user) {
                 that.user = user;
-                that.loaded = true;
                 if (user && user.email) { // logged in
                     that.onLogIn();
                 } else {
                     that.user = null;
+					that.loaded = true;
                 }
                 that.$forceUpdate();
                 //if (user) {
