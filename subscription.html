@@ -353,11 +353,11 @@
     <p><b>Email:</b>{{ user.email }}</p>
   </div>
   
-	<a class="button" @click="logIn v-if="!(user.email)">
+	<a class="button" @click="logIn" v-if="!(user.email)">
 		Log in
 	</a>
   
-  <a class="button" @click="logOut v-if="user.email">
+  <a class="button" @click="logOut" v-if="user.email">
 		Log out
 	</a>
 
