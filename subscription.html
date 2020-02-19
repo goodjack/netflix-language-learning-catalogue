@@ -348,23 +348,23 @@
 	
   Please log in to view your subscription settings.
   
-  <div class="user-info">
-    <h4>User info:</h4>
-    <p><b>Email:</b>{{ user.email }}</p>
-  </div>
   
-	<a href="#" class="button" @click="logIn" v-if="!(user.email)">
+	<a href="#" class="button button-raised" @click="logIn" v-if="!(user.email)">
 		Log in
 	</a>
 	
 	<div v-if="user.email && user.subscriptionInfo.cancel_url === 'FULL'">
-		<a :href="user.subscriptionInfo.cancel_url" target="_blank" class="button">
+		  <div class="user-info">
+			<h4>User info:</h4>
+			<p><b>Email:</b>{{ user.email }}</p>
+		  </div>
+		<a :href="user.subscriptionInfo.cancel_url" target="_blank" class="button button-raised" style="background-color: #b84b4b; color: #fff;">
 			Cancel Subscription
 		</a>
 		<p style="color: red;">Warning: Once you unsubscribe, your subscription will stop immediately!</p>
 	</div>
   
-  <a href="#" class="button" @click="logOut" v-if="user.email">
+  <a href="#" class="button button-raised" @click="logOut" v-if="user.email">
 		Log out
 	</a>
 
@@ -411,12 +411,24 @@
         let that = this;
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
-          //that.user = result.user;
-          
+          that.user = result.user;
+          this.onLogIn();
         }).catch(function(error) {
           //
         });
       },
+	  onLogIn: function() {
+		  let that = this;
+		  alert('onLogIn');
+	  	  let getUserData = firebase.functions().httpsCallable('getUserData');
+	  	  getUserData({}).then(function(result) {
+	  	    // Read result of the Cloud Function.
+		    alert(JSON.stringify(result));
+		    this.user.subscriptionInfo = result.data;
+		    this.$forceUpdate();
+		  });
+		  
+	  },
       logOut: function(e) {
         e.preventDefault();
         firebase.auth().signOut().then(function() {
@@ -437,21 +449,12 @@
       firebase.auth().onAuthStateChanged(function(user) {
           this.user = user; 
 		  if (user && user.email) { // logged in
-			alert('logged in event');
-		    let getUserData = firebase.functions().httpsCallable('getUserData');
-			getUserData({}).then(function(result) {
-			  // Read result of the Cloud Function.
-			  alert(JSON.stringify(result));
-			  this.user.subscriptionInfo = result.data;
-			  this.$forceUpdate();
-			});
-			this.$forceUpdate();
+			this.onLogIn();
 		  } else {
 			alert('logged out event');
 			this.user = null;
-			this.$forceUpdate();
-			  
 		  }
+		  this.$forceUpdate();
           //if (user) {
             // User is signed in.
             //var displayName = user.displayName;
