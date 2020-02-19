@@ -142,7 +142,7 @@
         <span class="button-raised" style="margin: 45px auto; padding: 12px 30px" @click="doContinue()">{{translate('continue')}}</span>
     </div>
     <div v-if="showSetupComplete" style="text-align: center; padding: 0 30px 30px; max-width: 600px; margin: 0 auto; ">
-        <h1 style="display: block; margin-bottom: 35px; font-family: Roboto, sans-serif; color: #c3819c;">{{translate('success')}}</h1>
+        <h1 style="display: block; margin-bottom: 35px; font-family: Roboto, sans-serif; ">{{translate('success')}}</h1>
         <p>{{translate('successText1')}}</p>
         <p>{{translate('successText2')}}</p>
     </div>
@@ -273,7 +273,8 @@
             }
 
             // show config
-            this.showConfig = !!(this.getHashValue('showConfig'));
+            this.showConfig = false;
+            this.showSetupComplete = !!(this.getHashValue('showConfig'));
             // remove showConfig hash
             this.setHashValue('showConfig', '');
         },
