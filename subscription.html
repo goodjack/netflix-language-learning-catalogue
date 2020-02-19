@@ -353,7 +353,7 @@
 		</a>
 	</div>
 	
-	<div v-if="user && user.subscriptionInfo && user.subscriptionInfo.cancel_url === 'FULL'">
+	<div v-if="user && user.subscriptionInfo && user.subscriptionInfo.cancel_url">
 		  <div class="user-info">
 			<h4>User info:</h4>
 			<p><b>Email:</b>{{ user.email }}</p>
@@ -373,7 +373,7 @@
 </div>
 
 
-555
+666
 
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
