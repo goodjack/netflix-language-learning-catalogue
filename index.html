@@ -248,6 +248,12 @@
 		a:hover {
 			color: #8b5a6e;
 		}
+		.subscription-link {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		
+		}
 	</style>
 
 	<script type="text/javascript">
@@ -339,6 +345,10 @@
 			Language Learning with Netflix
 		</h1>
 	</div>
+	
+	<a class="button" href="/subscription.html" class="subscription-link">
+		{{translate('manageSubscription')}}
+	</a>
 
 	<nav class="top-nav">
 		<a class="button-raised" href="https://chrome.google.com/webstore/detail/hoombieeljmmljlkjmnheibnpciblicm">
@@ -515,6 +525,13 @@
 					'zh-TW': ' ',
 					'ja': ' ',
 					'th': ' '
+				},
+				'manageSubscription': {
+					'en': 'Manage Subscription',
+					'ko': '구독 관리',
+					'zh-TW': '訂閱管理',
+					'ja': '購読を管理する',
+					'th': 'จัดการแผนสมาชิก'
 				}
 			}
 		}
