@@ -353,12 +353,12 @@
 		</a>
 	</div>
 	
-	<div v-if="user.email && user.subscriptionInfo.cancel_url === 'FULL'">
+	<div v-if="user && user.subscriptionInfo && user.subscriptionInfo.cancel_url === 'FULL'">
 		  <div class="user-info">
 			<h4>User info:</h4>
 			<p><b>Email:</b>{{ user.email }}</p>
 		  </div>
-		<a :href="user.subscriptionInfo.cancel_url" target="_blank" class="button button-raised" style="background-color: #b84b4b; color: #fff;">
+		<a :href="((user || {}).subscriptionInfo || {}).cancel_url" target="_blank" class="button button-raised" style="background-color: #b84b4b; color: #fff;">
 			Cancel Subscription
 		</a>
 		<p style="color: red;">Warning: Once you unsubscribe, your subscription will stop immediately!</p>
@@ -373,7 +373,7 @@
 </div>
 
 
-1
+
 
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
