@@ -502,6 +502,7 @@
             onLogIn: function () {
                 let that = this;
                 if (that.user) {
+		    that.loaded = false;
                     let getUserData = firebase.functions().httpsCallable('getUserData');
                     getUserData({}).then(function (result) {
                         // Read result of the Cloud Function.
