@@ -1,0 +1,534 @@
+{
+  "langCode": {
+    "message": "sr"
+  },
+  "appNameTr": {
+    "message": "Učenje jezika na Netflixu"
+  },
+  "appName": {
+    "message": "Language Learning with Netflix"
+  },
+  "appNameYoutube": {
+    "message": "Language Learning with Youtube BETA"
+  },
+  "appDesc": {
+    "message": "Poboljšajte svoje veštine samostalno, efektivno i uz užitak, gledajući filmove i serije na jeziku koji učite."
+  },
+  "catalogue": {
+    "message": "Katalog"
+  },
+  "catalogue_tooltip": {
+    "message": "Pronađite filmove i serije pogodne za uporebu sa LLN-om."
+  },
+  "help": {
+    "message": "Pomoć"
+  },
+  "help_tooltip": {
+    "message": "Uputstvo za upotrebu, saveti."
+  },
+  "feedback": {
+    "message": "Fidbek"
+  },
+  "feedback_tooltip": {
+    "message": "Nešto nije u redu? Imate ideje za nove funkcionalnosti?"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "facebook_tooltip": {
+    "message": "Lajkujte našu stranicu i pratite najnovije vijesti."
+  },
+  "originalLanguage_label": {
+    "message": "Izvorni jezik filma:"
+  },
+  "originalLanguage_tooltip": {
+    "message": "Ovo je izvorni jezik Netflix filma ili serije."
+  },
+  "noDictionary_error": {
+    "message": "LLN ekstenzija još ne podržava korišćenje rečnika za <text>. Ova funkcionalnost stiže uskoro!"
+  },
+  "subtitleLanguage_label": {
+    "message": "Jezik titlova na Netflix-u:"
+  },
+  "subtitleLanguage_tooltip": {
+    "message": "Ovo je odabrani jezik Netflix filma ili serije."
+  },
+  "subtitlesNotLoaded_error": {
+    "message": "Netflix titlovi nisu učitani. Da li je izabran jezik titlova u Netflix meniju?"
+  },
+  "subtitlesNoMatchAudio_error": {
+    "message": "Odabrani Netflix titlovi (<text>) nisu isti kao audio zapis. Bilo bi bolje da ih postavite na izvorni jezik filma (<text>) u Netflix meniju. Ili pogledajte LLN katalog i pronađite filmove na jeziku koji učite."
+  },
+  "audioNoMatchSubtitles_error": {
+    "message": "Odabrani Netflix audio zapis (<text>) verovatno ne odgovara titlovima. Pokušajte da ga postavite na izvorni jezik filma (<text>) u Netflix meniju ili pogledajte LLN katalog i pronadjite filmove na jeziku koji učite."
+  },
+  "audioLanguage_label": {
+    "message": "Jezik audio zapisa:"
+  },
+  "audioLanguage_tooltip": {
+    "message": "Ovo je jezik odabrane Netflix audio trake."
+  },
+  "pleaseSelectSubtitles": {
+    "message": "- Odaberite titlove u Netflix plejeru -"
+  },
+  "loadingSubtitles": {
+    "message": "- Učitavanje titlova u toku... -"
+  },
+  "loadingTranslations": {
+    "message": "Učitavanje prevoda ..."
+  },
+  "firstSubtitleNotReached": {
+    "message": "- Prvi titl još nije započeo. -"
+  },
+  "errorApology": {
+    "message": "Došlo je do greške u LLN ekstenziji. Programeri su automatski obavešteni. Pokušajte da ponovo učitate stranicu ili se vratite za 24 sata. Izvinjavamo se zbog neugodnosti. Pogledajte našu Facebook stranicu za vesti. Poruka o grešci: <text>"
+  },
+  "openClose_tooltip": {
+    "message": "Otvori / zatvori LLN."
+  },
+  "vocabHighlight_label": {
+    "message": "Markiranje reči:"
+  },
+  "levelWithNumber": {
+    "message": "Nivo <text>: <text> reči"
+  },
+  "levelDisable": {
+    "message": "Nivo <text>: isključi"
+  },
+  "vocabHighlight_tooltip": {
+    "message": "(Eksperimentalno) Zasiviti manje česte reči, kako biste se usredsredili na reči koje su relevantne za vaš nivo znanja."
+  },
+  "translationLanguage_label": {
+    "message": "Jezik prevoda:"
+  },
+  "translationLanguage_tooltip": {
+    "message": "Ovo je jezik prevoda. Postavite ga na svoj materinji jezik."
+  },
+  "showMachineTranslation_label": {
+    "message": "Prikaži mašinski prevod:"
+  },
+  "showMachineTranslation_tooltip": {
+    "message": "Pokaži mašinski prevod izvornih titlova na mom jeziku."
+  },
+  "showHumanTranslation_label": {
+    "message": "Prikaži ručni prevod:"
+  },
+  "showHumanTranslation_tooltip": {
+    "message": "Prikaži ljudski prevod izvornih titlova na mom jeziku, ako je dostupan."
+  },
+  "slowSpeechSegments": {
+    "message": "Uspori segmente sa govorom:"
+  },
+  "slowSpeechSegments_tooltip": {
+    "message": "Smanji brzinu reprodukcije video zapisa kada je titl aktivan (0.8x), kako biste ga lakše razumeli."
+  },
+  "keyboardShortcuts": {
+    "message": "Prečice na tastaturi:"
+  },
+  "previous": {
+    "message": "Prethodni"
+  },
+  "next": {
+    "message": "Sledeći"
+  },
+  "previousSub": {
+    "message": "Prethodni titl"
+  },
+  "nextSub": {
+    "message": "Sledeći titl"
+  },
+  "play": {
+    "message": "Pusti"
+  },
+  "playPause": {
+    "message": "Pusti / pauziraj"
+  },
+  "repeat": {
+    "message": "Ponovi"
+  },
+  "alsoUseASD": {
+    "message": "Takođe možete koristiti: A, S, D, Space"
+  },
+  "autoPause": {
+    "message": "Auto-pauza"
+  },
+  "autoPause_tooltip": {
+    "message": "Automatski zaustavite reprodukciju na kraju svakog titla."
+  },
+  "none": {
+    "message": "Nijedan"
+  },
+  "nms_tip": {
+    "message": "Učite jezike? Isprobajte našu novu ekstenziju za učenje jezika na Netflixu."
+  },
+
+  "welcomeModal_line1_string": {
+    "message": "Poštovani korisnici,"
+  },
+  "welcomeModal_line2_string": {
+    "message": "Napravili smo veliku nadogradnju ekstenzije. Nadamo se da će vam se svideti nove funkcionalnosti:"
+  },
+  "welcomeModal_line3_string": {
+    "message": "Titlovi sada mogu da se prikazuju preko videa."
+  },
+  "welcomeModal_line4_string": {
+    "message": "Dodatni bočni panel za prikaz svih titlova."
+  },
+  "welcomeModal_line5_string": {
+    "message": "Bolja podrška za jezike Azije."
+  },
+  "proFeatures_line1_string": {
+    "message": "Pro' režim omogućava dodatne funkcionalnosti:"
+  },
+  "proFeatures_line2_string": {
+    "message": "Mašinski prevodi"
+  },
+  "proFeatures_tt2_string": {
+    "message": "Oni su bliži značenju izvornih titlova, pa su time korisniji za učenje jezika."
+  },
+  "proFeatures_line3_string": {
+    "message": "Sačuvajte reči i fraze"
+  },
+  "proFeatures_tt3_string": {
+    "message": "Reči koje čuvate označene su u svim titlovima. Ovo pomaže da organizujete učenje. Sačuvane reči i fraze mogu se eksportovati u Anki (program za pamćenje kartica)."
+  },
+  "proFeatures_line4_string": {
+    "message": "Titlovi za sinhronizovane filmove"
+  },
+  "proFeatures_tt4_string": {
+    "message": "Podržite naš trud da kreiramo titlove za američke serije koji se slažu sa sinhronizovanim audiom u drugim jezicima. Možete ovo koristiti, na primer, da učite Nemački jezik uz seriju Breaking Bad."
+  },
+  "proFeatures_line5_string": {
+    "message": "Podržite programere"
+  },
+  "proFeatures_tt5_string": {
+    "message": "Radimo naporno da poboljšamo ekstenziju i razvijemo nove funkcionalnosti"
+  },
+  "price_string": {
+    "message": "Mesečna cena je: "
+  },
+  "welcomeModal_line6_string": {
+    "message": "Mašinsko prevođenje je bilo besplatno, ali je to skup servis. Nadamo se da razumete."
+  },
+  "freeTrial3_line_string": {
+    "message": "Možete isprobati 'Pro' mod besplatno 3 dana."
+  },
+  "freeTrial7_line_string": {
+    "message": "Možete isprobati 'Pro' mod besplatno 7 dana."
+  },
+  "notNow_btn_string": {
+    "message": "Ne sada"
+  },
+  "continueWithGoogle_btn_string": {
+    "message": "Nastavite sa Google nalogom"
+  },
+  "trialBegunModal_body_string": {
+    "message": "Vaš probni period je počeo! 'Pro' funkcionalnosti su omogućene!"
+  },
+  "ok_btn_string": {
+    "message": "OK"
+  },
+  "prePaymentModal_line1_string": {
+    "message": "Pretplatite se kako biste nastavili da koristite 'Pro' funkcionalnosti."
+  },
+  "choosePaymentProvider_line_string": {
+    "message": "Odaberite način plaćanja:"
+  },
+  "payWithGoogle_btn_string": {
+    "message": "Prihvata kreditne kartice."
+  },
+  "payWithPaddle_btn_string": {
+    "message": "Prihvata kreditne kartice i Paypal."
+  },
+  "paymentSuccessful_line1_string": {
+    "message": "Plaćanje uspešno! Hvala vam što podržavate naš projekat!"
+  },
+  "paymentSuccessful_line2_string": {
+    "message": "Možete da otkažete pretplatu bilo kad iz panela sa podešavanjima."
+  },
+  "paymentSuccessfulPaddleMessage_line_string": {
+    "message": "Napomena: ako bude potrebe da se plaćanje ručno proveri, molimo sačekajte par sati da se aktivira 'Pro' režim. Izvinite zbog čekanja!"
+  },
+  "cancelGoogle_line_string": {
+    "message": "Napomena: 'Pro' režim ostaje aktivan 30 dana nakon poslednje uplate."
+  },
+  "cancelSubscription_btn_string": {
+    "message": "Otkažite pretplatu"
+  },
+  "problemWithPayment_line1_string": {
+    "message": "Došlo je do greške pri plaćanju."
+  },
+  "problemWithPayment_line2_string": {
+    "message": "Molimo osvežite ovaj prozor nakon ažuriranja vaših informacija o plaćanju."
+  },
+  "updatePayment_btn_string": {
+    "message": "Izmeni pretplatu"
+  },
+  "alreadyUserPleaseSignIn": {
+    "message": "Već ste korisnik? Molimo ulogujte se."
+  },
+  "pleaseSignIn": {
+    "message": "Molimo ulogujte se."
+  },
+  "signIn": {
+    "message": "Prijavi se"
+  },
+  "signOut": {
+    "message": "Odjavljivanje"
+  },
+  "options": {
+    "message": "Opcije"
+  },
+  "mode": {
+    "message": "Mod:"
+  },
+  "manageSubscription": {
+    "message": "Izmeni pretplatu"
+  },
+  "mode_free": {
+    "message": "Besplatno"
+  },
+  "mode_pro": {
+    "message": "Pro"
+  },
+  "mode_trial": {
+    "message": "Probni"
+  },
+  "signInStatus": {
+    "message": "Status prijave:"
+  },
+  "signedIn": {
+    "message": "Ulogovan"
+  },
+  "notSignedIn": {
+    "message": "Izlogovan"
+  },
+  "fix": {
+    "message": "Ispravi"
+  },
+  "featureComingSoon": {
+    "message": "Funkcionalnost još nije implementirana."
+  },
+  "showTransliterations": {
+    "message": "Prikaži transkripcije:"
+  },
+  "noTransliterations": {
+    "message": "Bez transkripcija"
+  },
+  "romaji": {
+    "message": "Romaji"
+  },
+  "hiragana": {
+    "message": "Hiragana"
+  },
+  "playbackSpeed": {
+    "message": "Brzina reprodukcije:"
+  },
+  "normal": {
+    "message": "Normalna"
+  },
+  "notAvailable": {
+    "message": "Nije dostupan."
+  },
+  "noHTAvailable": {
+    "message": "Ručni prevodi nisu dostupni za izabrani jezik."
+  },
+  "noMTAvailable": {
+    "message": "Mašinski prevodi su dostupni samo za titlove u originalnom jeziku filma."
+  },
+  "proFeature": {
+    "message": "Pro funkcionalnost"
+  },
+  "saveCurrentSubtitle": {
+    "message": "Sačuvaj titl"
+  },
+  "toggleAutoPause": {
+    "message": "Uključi / iskljući automatsko pauziranje"
+  },
+  "exportToAnki": {
+    "message": "Izvezi u Anki"
+  },
+  "pleaseSelectItemsToExport": {
+    "message": "Izaberite stavke za izvoz:"
+  },
+  "allItems": {
+    "message": "Sve stavke"
+  },
+  "download": {
+    "message": "Preuzmi"
+  },
+  "subtitles": {
+    "message": "Titlovi"
+  },
+  "savedItems": {
+    "message": "Sačuvane stavke"
+  },
+  "allLanguages": {
+    "message": "Svi jezici"
+  },
+  "allTypes": {
+    "message": "Svi tipovi"
+  },
+  "yellowWords": {
+    "message": "Žute reči"
+  },
+  "blueWords": {
+    "message": "Plave reči"
+  },
+  "greenWords": {
+    "message": "Zelene reči"
+  },
+  "purpleWords": {
+    "message": "Ljubičaste reči"
+  },
+  "redWords": {
+    "message": "Crvene reči"
+  },
+  "phrases": {
+    "message": "Titlovi"
+  },
+  "noSavedItems": {
+    "message": "Nema sačuvanih stavki."
+  },
+  "clickAStar": {
+    "message": "Kliknite na zvezdu da biste sačuvali titl, ili na dugmiće u boji u rečniku, da biste sačuvali reč."
+  },
+  "loadingDotDotDot": {
+    "message": "Učitavanje..."
+  },
+  "showMore": {
+    "message": "Prikaži više"
+  },
+  "openCloseBottomPanel": {
+    "message": "Otvori / zatvori donji odeljak"
+  },
+  "openCloseVerticalView": {
+    "message": "Otvori / zatvori vertikalni prikaz"
+  },
+  "close": {
+    "message": "Zatvori"
+  },
+  "autoPaused": {
+    "message": "AUTO-PAUZIRANO"
+  },
+  "pressSpaceToContinue": {
+    "message": "(Pritisnite SPACE za nastavak)"
+  },
+  "saveWordTooltip": {
+    "message": "Sačuvaj reč. Takođe možete sačuvati reč desnim klikom na reč."
+  },
+  "subscriptionToProFeatures": {
+    "message": "Pretplata na 'Pro' funkcionalnosti."
+  },
+  "tryForFree": {
+    "message": "Isprobajte besplatno"
+  },
+  "noCreditCardRequired": {
+    "message": "Nije potrebna kreditna kartica."
+  },
+  "noCharge": {
+    "message": "Za razliku od drugih, nećemo vam naplatiti bilo šta tokom probnog perioda, niti automatski nadograditi vašu licencu."
+  },
+  "subscriptionActive": {
+    "message": "Pretplata je aktivna."
+  },
+  "speedUpPlayback": {
+    "message": "Ubrzaj reprodukciju"
+  },
+  "slowDownPlayback": {
+    "message": "Uspori reprodukciju"
+  },
+  "highlightSavedWords_label": {
+    "message": "Istakni sačuvane reči"
+  },
+  "onLeftClick_label": {
+    "message": "Na levi klik:"
+  },
+  "onRightClick_label": {
+    "message": "Na desni klik:"
+  },
+  "doNothing_option": {
+    "message": "Ne radi ništa"
+  },
+  "showDict_option": {
+    "message": "Prikaži rečnik"
+  },
+  "showDictSpeak_option": {
+    "message": "Prikaži rečnik i izgovori reč"
+  },
+  "speakWord_option": {
+    "message": "Izgovori reč"
+  },
+  "saveWord_option": {
+    "message": "Sačuvaj reč"
+  },
+  "removeAllItems": {
+    "message": "Ukloni sve"
+  },
+  "areYouSure": {
+    "message": "Da li ste sigurni?"
+  },
+  "hideTranslation": {
+    "message": "Sakrij prevode:"
+  },
+  "hideTranslation_tt": {
+    "message": "Sakrij prevode tokom gledanja videa. Kliknite na tekst ili pritisnite [e] za prevode."
+  },
+  "littlePracticeEveryDay": {
+    "message": "Za učenje jezika potrebno je malo vežbe svaki dan. "
+  },
+  "enableLln": {
+    "message": "Uključi LLN"
+  },
+  "doYouLikeOurExtension": {
+    "message": "Da li vam se dopada LLN?"
+  },
+  "reportBug": {
+    "message": "Prijavi grešku"
+  },
+  "translationNotFound": {
+    "message": "Prevod nije pronađen."
+  },
+  "usageExamples": {
+    "message": "Primeri upotrebe"
+  },
+  "userDefinedExternalDict_label": {
+    "message": "Dodatni URL-ovi za rečnik:"
+  },
+  "turnOnOff": {
+    "message": "Upali / ugasi"
+  },
+  "fontSize_label": {
+    "message": "Veličina fonta:"
+  },
+  "extraSmall": {
+    "message": "Najmanja"
+  },
+  "small": {
+    "message": "Mala"
+  },
+  "normal": {
+    "message": "Srednja"
+  },
+  "large": {
+    "message": "Velika"
+  },
+  "extraLarge": {
+    "message": "Najveća"
+  },
+  "removeSubtitle": {
+    "message": "Ukloni"
+  },
+  "settings": {
+    "message": "Podešavanja"
+  },
+  "subtitleLanguage_label_yt": {
+    "message": "Jezik titlova na Youtube-u:"
+  },
+  "subtitleLanguage_tooltip_yt": {
+    "message": "Ovo je odabrani jezik Youtube filma ili serije."
+  },
+  "subtitlesNotLoaded_error_yt": {
+    "message": "Youtube titlovi nisu učitani. Da li je izabran jezik titlova u Youtube meniju?"
+  }
+}

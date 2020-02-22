@@ -1,0 +1,19 @@
+.lln-options-scroller::-webkit-scrollbar {
+    width: 10px;
+}
+.lln-options-scroller::-webkit-scrollbar-track {
+    background: #383838;
+}
+.lln-options-scroller::-webkit-scrollbar-thumb {
+    background: #555;
+    min-height: 50px;
+}
+.lln-options-scroller::-webkit-scrollbar-corner {
+    background: #383838;
+}
+.lln-options-scroller::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+.lln-hide-on-nf.lln-hide-on-nf {
+    display: none;
+}

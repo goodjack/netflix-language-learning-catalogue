@@ -1,0 +1,571 @@
+{
+  "langCode": {
+    "message": "en"
+  },
+  "appNameTr": {
+    "message": "Language Learning with Netflix"
+  },
+  "appName": {
+    "message": "Language Learning with Netflix"
+  },
+  "appNameYoutube": {
+    "message": "Language Learning with Youtube BETA"
+  },
+  "appDesc": {
+    "message": "Improve your skills on your own, effectively and enjoyably, by watching films and series in the language you study."
+  },
+  "appDescYoutube": {
+    "message": "Improve your skills on your own, effectively and enjoyably, by watching videos in the language you study."
+  },
+  "catalogue": {
+    "message": "Catalogue"
+  },
+  "catalogue_tooltip": {
+    "message": "Find movies and series suitable for use with LLN."
+  },
+  "help": {
+    "message": "Help"
+  },
+  "help_tooltip": {
+    "message": "Instructions for use, tips."
+  },
+  "feedback": {
+    "message": "Give Feedback"
+  },
+  "feedback_tooltip": {
+    "message": "Something wrong? Feature Request?"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "facebook_tooltip": {
+    "message": "Like our page and check the latest news."
+  },
+  "originalLanguage_label": {
+    "message": "Title Original Language:"
+  },
+  "originalLanguage_tooltip": {
+    "message": "This is the original language of the Netflix title."
+  },
+  "noDictionary_error": {
+    "message": "The LLN extension does not yet support using the dictionary for <text>. This feature is coming soon!"
+  },
+  "subtitleLanguage_label": {
+    "message": "Netflix Subtitle Language:"
+  },
+  "subtitleLanguage_tooltip": {
+    "message": "This is the language of the selected Netflix subtitles."
+  },
+  "subtitlesNotLoaded_error": {
+    "message": "Netflix subtitles were not loaded. Is a subtitle language selected in the Netflix playback menu?"
+  },
+  "subtitlesNoMatchAudio_error": {
+    "message": "The selected Netflix subtitles (<text>) don't match the audio. Try setting them to the title's original language (<text>) in the Netflix playback controls, or search the LLN catalogue for suggested titles for the language you study."
+  },
+  "audioNoMatchSubtitles_error": {
+    "message": "The selected Netflix audio track (<text>) is likely to not match the subtitles. Try setting it to the title's original language (<text>) in the Netflix playback controls, or search the LLN catalogue for suggested titles for the language you study."
+  },
+  "audioLanguage_label": {
+    "message": "Netflix Audio Language:"
+  },
+  "audioLanguage_tooltip": {
+    "message": "This is the language of the selected Netflix audio track."
+  },
+  "pleaseSelectSubtitles": {
+    "message": "- Please Select Subtitles in the Netflix Player -"
+  },
+  "loadingSubtitles": {
+    "message": "- Loading Subtitles, Please Wait... -"
+  },
+  "loadingTranslations": {
+    "message": "Loading translations..."
+  },
+  "firstSubtitleNotReached": {
+    "message": "- The first subtitle has not started yet. -"
+  },
+  "errorApology": {
+    "message": "LLN has detected an error has occured. The developers have been notified. Try reloading the page, or else try again in 24hrs. Sorry for the inconvenience. Check our Facebook page for updates.  Error message: <text>"
+  },
+  "openClose_tooltip": {
+    "message": "Open/close LLN."
+  },
+  "vocabHighlight_label": {
+    "message": "Vocabulary Highlighting:"
+  },
+  "levelWithNumber": {
+    "message": "Level <text>: <text> words"
+  },
+  "levelDisable": {
+    "message": "Level <text>: disable"
+  },
+  "vocabHighlight_tooltip": {
+    "message": "(Experimental) Grey-out less common words, to allow you to focus on the words that are more important for you at your level."
+  },
+  "translationLanguage_label": {
+    "message": "Translation Language:"
+  },
+  "translationLanguage_tooltip": {
+    "message": "This is the language of the translation(s). Set this to your native language."
+  },
+  "showMachineTranslation_label": {
+    "message": "Show Machine Translation:"
+  },
+  "showMachineTranslation_tooltip": {
+    "message": "Show a machine translation of the source subtitles in your language."
+  },
+  "showHumanTranslation_label": {
+    "message": "Show Human Translation:"
+  },
+  "showHumanTranslation_tooltip": {
+    "message": "Show a human translation of the source subtitles in your language, if available."
+  },
+  "slowSpeechSegments": {
+    "message": "Slow speech segments:"
+  },
+  "slowSpeechSegments_tooltip": {
+    "message": "Reduce the playback speed of the video when a subtitle is active (0.8x), to make it easier to understand."
+  },
+  "keyboardShortcuts": {
+    "message": "Keyboard shortcuts:"
+  },
+  "previous": {
+    "message": "Previous"
+  },
+  "next": {
+    "message": "Next"
+  },
+  "previousSub": {
+    "message": "Previous Subtitle"
+  },
+  "nextSub": {
+    "message": "Next Subtitle"
+  },
+  "play": {
+    "message": "Play"
+  },
+  "playPause": {
+    "message": "Play / Pause"
+  },
+  "repeat": {
+    "message": "Repeat"
+  },
+  "alsoUseASD": {
+    "message": "You can also use: A, S, D, Space"
+  },
+  "autoPause": {
+    "message": "Auto-pause"
+  },
+  "autoPause_tooltip": {
+    "message": "Automatically pause playback at the end of every subtitle."
+  },
+  "none": {
+    "message": "None"
+  },
+  "nms_tip": {
+    "message": "Are you learning a language? Try our new extension for studying a language with Netflix."
+  },
+  
+  "welcomeModal_line1_string": {
+    "message": "Dear Users,"
+  },
+  "welcomeModal_line2_string": {
+    "message": "We have made a major update to the extension. We hope you enjoy the new features:"
+  },
+  "welcomeModal_line3_string": {
+    "message": "Subtitles can now show on top of the video."
+  },
+  "welcomeModal_line4_string": {
+    "message": "Additional side panel to view all subtitles."
+  },
+  "welcomeModal_line5_string": {
+    "message": "Better support for Asian languages."
+  },
+  "proFeatures_line1_string": {
+    "message": "‘Pro’ mode enables extra features:"
+  },
+  "proFeatures_line2_string": {
+    "message": "Machine translations"
+  },
+  "proFeatures_tt2_string": {
+    "message": "These are closer in meaning to the original subtitles. They are more helpful for language students."
+  },
+  "proFeatures_line3_string": {
+    "message": "Save words and phrases"
+  },
+  "proFeatures_tt3_string": {
+    "message": "Any words you save are highlighted in all subtitles. This helps to organise your learning. Saved words and phrases can be exported to Anki (flashcard program)."
+  },
+  "proFeatures_line4_string": {
+    "message": "Subtitles for Dubbed Movies"
+  },
+  "proFeatures_tt4_string": {
+    "message": "Many series on Netflix have additional audio tracks in other languages (dubbed audio), but Netflix has no correct subtitles for these audio tracks. We would like to create them, so you can study, for example, German with Breaking Bad."
+  },
+  "proFeatures_line5_string": {
+    "message": "Support the developers"
+  },
+  "proFeatures_tt5_string": {
+    "message": "We are working hard to improve the extension and bring you new features."
+  },
+  "price_string": {
+    "message": "The price per month is:"
+  },
+  "welcomeModal_line6_string": {
+    "message": "Machine translation used to be free, but this is an expensive service to provide. We hope you understand."
+  },
+  "freeTrial3_line_string": {
+    "message": "You can try ‘Pro’ mode with a free 3-day trial."
+  },
+  "freeTrial7_line_string": {
+    "message": "You can try ‘Pro’ mode with a free 7-day trial."
+  },
+  "notNow_btn_string": {
+    "message": "Not now"
+  },
+  "continueWithGoogle_btn_string": {
+    "message": "Continue with Google Account"
+  },
+  "trialBegunModal_body_string": {
+    "message": "Your trial has begun! ‘Pro’ features have been enabled!"
+  },
+  "ok_btn_string": {
+    "message": "OK"
+  },
+  "prePaymentModal_line1_string": {
+    "message": "Subscribe to continue using ‘Pro’ features."
+  },
+  "choosePaymentProvider_line_string": {
+    "message": "Please choose a way to pay:"
+  },
+  "payWithGoogle_btn_string": {
+    "message": "Credit cards accepted."
+  },
+  "payWithPaddle_btn_string": {
+    "message": "Credit cards and Paypal accepted."
+  },
+  "paymentSuccessful_line1_string": {
+    "message": "Payment successful! Thanks for supporting our project!"
+  },
+  "paymentSuccessful_line2_string": {
+    "message": "You can cancel your subscription at any time from the settings."
+  },
+  "paymentSuccessfulPaddleMessage_line_string": {
+    "message": "Note: If your payment needs to be checked manually, please wait a few hours, then your ‘Pro’ mode should be activated automatically. Sorry for the delay!"
+  },
+  "cancelGoogle_line_string": {
+    "message": "Note: ‘Pro’ mode will stay active for 30 days after your last payment."
+  },
+  "cancelSubscription_btn_string": {
+    "message": "Cancel Subscription"
+  },
+  "problemWithPayment_line1_string": {
+    "message": "There was a problem with your subscription payment."
+  },
+  "problemWithPayment_line2_string": {
+    "message": "After updating payment, please reload this window."
+  },
+  "updatePayment_btn_string": {
+    "message": "Update Payment Information"
+  },
+  "alreadyUserPleaseSignIn": {
+    "message": "Already a user? Please sign in."
+  },
+  "pleaseSignIn": {
+    "message": "Please sign in."
+  },
+  "signIn": {
+    "message": "Sign in"
+  },
+  "signOut": {
+    "message": "Sign out"
+  },
+  "options": {
+    "message": "LLN Settings"
+  },
+  "mode": {
+    "message": "Mode:"
+  },
+  "manageSubscription": {
+    "message": "Manage Subscription"
+  },
+  "mode_free": {
+    "message": "Free"
+  },
+  "mode_pro": {
+    "message": "Pro"
+  },
+  "mode_trial": {
+    "message": "Trial"
+  },
+  "signInStatus": {
+    "message": "Sign in status:"
+  },
+  "signedIn": {
+    "message": "Signed in"
+  },
+  "notSignedIn": {
+    "message": "Not Signed in"
+  },
+  "fix": {
+    "message": "Fix"
+  },
+  "featureComingSoon": {
+    "message": "Feature coming soon."
+  },
+  "showTransliterations": {
+    "message": "Show Transliterations:"
+  },
+  "noTransliterations": {
+    "message": "No transliterations"
+  },
+  "romaji": {
+    "message": "Romaji"
+  },
+  "hiragana": {
+    "message": "Hiragana"
+  },
+  "playbackSpeed": {
+    "message": "Playback Speed:"
+  },
+  "normal": {
+    "message": "Normal"
+  },
+  "notAvailable": {
+    "message": "Not Available."
+  },
+  "noHTAvailable": {
+    "message": "No Human translation is available for the translation language selected."
+  },
+  "noMTAvailable": {
+    "message": "Machine Translations are only available for the movie's original subtitles."
+  },
+  "proFeature": {
+    "message": "Pro Feature"
+  },
+  "saveCurrentSubtitle": {
+    "message": "Save current subtitle"
+  },
+  "toggleAutoPause": {
+    "message": "Toggle auto-pause"
+  },
+  "exportToAnki": {
+    "message": "Export to Anki"
+  },
+  "pleaseSelectItemsToExport": {
+    "message": "Please select items to export:"
+  },
+  "allItems": {
+    "message": "All Items"
+  },
+  "download": {
+    "message": "Download"
+  },
+  "subtitles": {
+    "message": "Subtitles"
+  },
+  "savedItems": {
+    "message": "Saved Items"
+  },
+  "allLanguages": {
+    "message": "All languages"
+  },
+  "allTypes": {
+    "message": "All types"
+  },
+  "yellowWords": {
+    "message": "Yellow words"
+  },
+  "blueWords": {
+    "message": "Blue words"
+  },
+  "greenWords": {
+    "message": "Green words"
+  },
+  "purpleWords": {
+    "message": "Purple words"
+  },
+  "redWords": {
+    "message": "Red words"
+  },
+  "phrases": {
+    "message": "Phrases"
+  },
+  "noSavedItems": {
+    "message": "No saved items."
+  },
+  "clickAStar": {
+    "message": "Click on a star to save a subtitle, or the color buttons in the dictionary to save a word."
+  },
+  "loadingDotDotDot": {
+    "message": "Loading..."
+  },
+  "showMore": {
+    "message": "Show more"
+  },
+  "openCloseBottomPanel": {
+    "message": "Open / close bottom panel"
+  },
+  "openCloseVerticalView": {
+    "message": "Open / close vertical view"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "autoPaused": {
+    "message": "AUTO-PAUSED"
+  },
+  "pressSpaceToContinue": {
+    "message": "(Press SPACE to continue)"
+  },
+  "saveWordTooltip": {
+    "message": "Save word. You can also right-click a word to save it."
+  },
+  "subscriptionToProFeatures": {
+    "message": "Subscription to ‘Pro’ features."
+  },
+  "tryForFree": {
+    "message": "Try for free"
+  },
+  "noCreditCardRequired": {
+    "message": "No credit card required."
+  },
+  "noCharge": {
+    "message": "Unlike others, we won't charge you during your trial or automatically upgrade your subscription."
+  },
+  "subscriptionActive": {
+    "message": "Your subscription is active."
+  },
+
+  "speedUpPlayback": {
+    "message": "Speed up playback"
+  },
+  "slowDownPlayback": {
+    "message": "Slow down playback"
+  },
+  "highlightSavedWords_label": {
+    "message": "Highlight Saved Words"
+  },
+  "onLeftClick_label": {
+    "message": "On Left Click:"
+  },
+  "onRightClick_label": {
+    "message": "On Right Click:"
+  },
+  "doNothing_option": {
+    "message": "Do nothing"
+  },
+  "showDict_option": {
+    "message": "Show dictionary"
+  },
+  "showDictSpeak_option": {
+    "message": "Show dictionary and speak word"
+  },
+  "speakWord_option": {
+    "message": "Speak word"
+  },
+  "saveWord_option": {
+    "message": "Save word"
+  },
+  "removeAllItems": {
+    "message": "Remove all items"
+  },
+  "areYouSure": {
+    "message": "Are you sure?"
+  },
+  "hideTranslation": {
+    "message": "Hide translation:"
+  },
+  "hideTranslation_tt": {
+    "message": "Hide the translation when the video is playing. Click the text or press [e] to reveal the translation."
+  },
+  "littlePracticeEveryDay": {
+    "message": "Learning a language requires a little practice every day."
+  },
+  "enableLln": {
+    "message": "Enable LLN"
+  },
+  "doYouLikeOurExtension": {
+    "message": "Do you like using LLN?"
+  },
+  "reportBug": {
+    "message": "Report bug"
+  },
+  "externalDictsMessage": {
+    "message": "External dictionaries. You can open the last used external dictionary directly, by pressing Shift key while clicking on a word."
+  },
+  "userDefinedExternalDict_tooltip": {
+    "message": "User-defined dictionaries, that will show with other external dictionaries in the dictionary popup (they will be named U1, U2...). The URL needs to contain 'WORD' (in uppercase) - to be automatically replaced with any word you're looking up. You can insert multiple URLs in separate lines."
+  },
+  "translationNotFound": {
+    "message": "Translation not found."
+  },
+  "usageExamples": {
+    "message": "Usage Examples"
+  },
+  "userDefinedExternalDict_label": {
+    "message": "User Dictionary URLs:"
+  },
+  "turnOnOff": {
+    "message": "Turn on / off"
+  },
+  "fontSize_label": {
+    "message": "Font size:"
+  },
+  "extraSmall": {
+    "message": "Extra small"
+  },
+  "small": {
+    "message": "Small"
+  },
+  "normal": {
+    "message": "Normal"
+  },
+  "large": {
+    "message": "Large"
+  },
+  "extraLarge": {
+    "message": "Extra large"
+  },
+  "pleaseLeaveReviewMessage": {
+    "message": "Do you like LLN? Please help us by leaving a review in the Chrome webstore."
+  },
+  "writeReview": {
+    "message": "Write a review"
+  },
+  "saveSubtitle": {
+    "message": "Save"
+  },
+  "removeSubtitle": {
+    "message": "Remove"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "subtitleLanguage_label_yt": {
+    "message": "Youtube Subtitle Language:"
+  },
+  "subtitleLanguage_tooltip_yt": {
+    "message": "This is the language of the selected Youtube subtitles."
+  },
+  "subtitlesNotLoaded_error_yt": {
+    "message": "Youtube subtitles were not loaded. Is a subtitle language selected in the Youtube playback menu?"
+  },
+  "exportAsJson": {
+    "message": "Export as JSON"
+  },
+  "exportAsCsv": {
+    "message": "Export as CSV"
+  },
+  "pauseOnSubsHover_label": {
+    "message": "Pause on Mouse Hover"
+  },
+  "pauseOnSubsHover_tt": {
+    "message": "Automatically pause when the mouse is over subtitles"
+  },
+  "overrideArrowKeys_label": {
+    "message": "Override Arrow Keys"
+  },
+  "overrideArrowKeys_tt": {
+    "message": "Make arrow keyboard keys behave the same as A, S, D keys"
+  }
+}

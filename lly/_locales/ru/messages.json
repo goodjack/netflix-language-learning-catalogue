@@ -1,0 +1,534 @@
+{
+  "langCode": {
+    "message": "ru"
+  },
+  "appNameTr": {
+    "message": "Изучение языка с Netflix"
+  },
+  "appName": {
+    "message": "Language Learning with Netflix"
+  },
+  "appNameYoutube": {
+    "message": "Language Learning with Youtube BETA"
+  },
+  "appDesc": {
+    "message": "Совершенствуйте свои навыки самостоятельно, эффективно и с удовольствием, просматривая фильмы и сериалы на изучаемом языке."
+  },
+  "catalogue": {
+    "message": "Каталог"
+  },
+  "catalogue_tooltip": {
+    "message": "Найдите фильмы и сериалы, подходящие для использования с LLN."
+  },
+  "help": {
+    "message": "Помощь"
+  },
+  "help_tooltip": {
+    "message": "Инструкция по применению, советы."
+  },
+  "feedback": {
+    "message": "Обратная связь"
+  },
+  "feedback_tooltip": {
+    "message": "Что-то не так? Запрос функции?"
+  },
+  "facebook": {
+    "message": "Facebook"
+  },
+  "facebook_tooltip": {
+    "message": "Поставьте лайк нашей странице и узнавайте последние новости."
+  },
+  "originalLanguage_label": {
+    "message": "Исходный язык фильма:"
+  },
+  "originalLanguage_tooltip": {
+    "message": "Это исходный язык фильма."
+  },
+  "noDictionary_error": {
+    "message": "Расширение LLN пока не поддерживает использование словаря для <text>. Эта функция скоро появится!"
+  },
+  "subtitleLanguage_label": {
+    "message": "Язык субтитров Netflix:"
+  },
+  "subtitleLanguage_tooltip": {
+    "message": "Это язык выбранных субтитров Netflix."
+  },
+  "subtitlesNotLoaded_error": {
+    "message": "Субтитры Netflix не были загружены. Выбран ли язык субтитров в меню воспроизведения Netflix?"
+  },
+  "subtitlesNoMatchAudio_error": {
+    "message": "Выбранные субтитры Netflix (<text>) не соответствуют аудио. Попробуйте установить для них исходный язык заголовка (<text>) в элементах управления воспроизведением Netflix или найдите в каталоге LLN предлагаемые заголовки для изучаемого языка."
+  },
+  "audioNoMatchSubtitles_error": {
+    "message": "Выбранная звуковая дорожка Netflix (<text>), вероятно, не соответствует субтитрам. Попробуйте настроить её на исходный язык заголовка (<text>) в элементах управления воспроизведением Netflix или поищите в каталоге LLN предлагаемые заголовки для изучаемого языка."
+  },
+  "audioLanguage_label": {
+    "message": "Язык аудио Netflix:"
+  },
+  "audioLanguage_tooltip": {
+    "message": "Это язык выбранной звуковой дорожки Netflix."
+  },
+  "pleaseSelectSubtitles": {
+    "message": "- Пожалуйста, выберите субтитры в плеере Netflix -"
+  },
+  "loadingSubtitles": {
+    "message": "- Загрузка субтитров, пожалуйста, подождите ... -"
+  },
+  "loadingTranslations": {
+    "message": "Загрузка переводов ..."
+  },
+  "firstSubtitleNotReached": {
+    "message": "- Первый субтитр еще не начался. -"
+  },
+  "errorApology": {
+    "message": "LLN обнаружил ошибку. Разработчики были уведомлены. Попробуйте перезагрузить страницу или повторите попытку через 24 часа. Приносим извинения за неудобства. Проверьте наличие обновлений на нашей странице на Facebook. Сообщение об ошибке: <text>"
+  },
+  "openClose_tooltip": {
+    "message": "Открыть / закрыть LLN."
+  },
+  "vocabHighlight_label": {
+    "message": "Выделение лексики:"
+  },
+  "levelWithNumber": {
+    "message": "Уровень <text>: <text> слова"
+  },
+  "levelDisable": {
+    "message": "Уровень <text>: отключить"
+  },
+  "vocabHighlight_tooltip": {
+    "message": "(Экспериментально) Затемнить менее распространенные слова, чтобы Вы могли сфокусироваться на словах, которые более важны для Вас на Вашем уровне."
+  },
+  "translationLanguage_label": {
+    "message": "Язык перевода:"
+  },
+  "translationLanguage_tooltip": {
+    "message": "Это язык перевода. Настройте на свой родной язык."
+  },
+  "showMachineTranslation_label": {
+    "message": "Показать машинный перевод:"
+  },
+  "showMachineTranslation_tooltip": {
+    "message": "Показать машинный перевод исходных субтитров на Вашем языке."
+  },
+  "showHumanTranslation_label": {
+    "message": "Показать перевод, выполненный человеком:"
+  },
+  "showHumanTranslation_tooltip": {
+    "message": "Показать перевод исходных субтитров, выполненный человеком, на Ваш язык, если он доступен."
+  },
+  "slowSpeechSegments": {
+    "message": "Речевые сегменты в медленном темпе:"
+  },
+  "slowSpeechSegments_tooltip": {
+    "message": "Уменьшите скорость воспроизведения видео, когда субтитры активны (0,8х), чтобы их было легче понять."
+  },
+  "keyboardShortcuts": {
+    "message": "Горячие клавиши:"
+  },
+  "previous": {
+    "message": "Предыдущий"
+  },
+  "next": {
+    "message": "Следующий"
+  },
+  "previousSub": {
+    "message": "Предыдущий субтитр"
+  },
+  "nextSub": {
+    "message": "Следующий субтитр"
+  },
+  "play": {
+    "message": "Воспроизведение"
+  },
+  "playPause": {
+    "message": "Пауза"
+  },
+  "repeat": {
+    "message": "Повтор"
+  },
+  "alsoUseASD": {
+    "message": "Вы также можете использовать: A, S, D, Space (пробел)"
+  },
+  "autoPause": {
+    "message": "Авто-пауза"
+  },
+  "autoPause_tooltip": {
+    "message": "Автоматически приостанавливать воспроизведение в конце каждого субтитра."
+  },
+  "none": {
+    "message": "Никто"
+  },
+  "nms_tip": {
+    "message": "Вы изучаете язык? Попробуйте наше новое расширение для изучения языка с Netflix."
+  },
+
+  "welcomeModal_line1_string": {
+    "message": "Уважаемые пользователи,"
+  },
+  "welcomeModal_line2_string": {
+    "message": "Мы выпустили значительное обновление. Мы надеемся, что вам понравятся новые функции:"
+  },
+  "welcomeModal_line3_string": {
+    "message": "Субтитры теперь могут отображаться поверх видео."
+  },
+  "welcomeModal_line4_string": {
+    "message": "Дополнительная боковая панель для просмотра всех субтитров."
+  },
+  "welcomeModal_line5_string": {
+    "message": "Улучшенная поддержка азиатских языков."
+  },
+  "proFeatures_line1_string": {
+    "message": "Режим «Pro» включает в себя дополнительные функции:"
+  },
+  "proFeatures_line2_string": {
+    "message": "Машинные переводы"
+  },
+  "proFeatures_tt2_string": {
+    "message": "Они ближе по смыслу к оригинальным субтитрам. Более полезны для изучающих языки."
+  },
+  "proFeatures_line3_string": {
+    "message": "Сохранить слова и фразы"
+  },
+  "proFeatures_tt3_string": {
+    "message": "Любые слова, которые вы сохраняете, выделяются во всех субтитрах. Это помогает организовать ваше обучение. Сохраненные слова и фразы могут быть экспортированы в Anki (программа для запоминания иностранных слов с помощью карточек)."
+  },
+  "proFeatures_line4_string": {
+    "message": "Субтитры для дублированных фильмов"
+  },
+  "proFeatures_tt4_string": {
+    "message": "Многие сериалы на Netflix имеют дополнительные аудиодорожки на других языках (дубляж), но у Netflix нет к ним верных субтитров. Мы бы хотели их создать, чтобы вы могли изучать, к примеру, немецкий язык с Breaking Bad (\"Во все тяжкие\")."
+  },
+  "proFeatures_line5_string": {
+    "message": "Поддержите разработчиков"
+  },
+  "proFeatures_tt5_string": {
+    "message": "Мы прилагаем все усилия, чтобы улучшить расширение браузера и предложить вам новые функции."
+  },
+  "price_string": {
+    "message": "Цена за месяц составляет:"
+  },
+  "welcomeModal_line6_string": {
+    "message": "Раньше машинный перевод был бесплатным, но это дорогостоящий сервис. Мы надеемся на ваше понимание."
+  },
+  "freeTrial3_line_string": {
+    "message": "Вы можете попробовать режим «Pro» в бесплатной 3-дневной пробной версии."
+  },
+  "freeTrial7_line_string": {
+    "message": "Вы можете попробовать режим «Pro» в бесплатной 7-дневной пробной версии."
+  },
+  "notNow_btn_string": {
+    "message": "Не сейчас"
+  },
+  "continueWithGoogle_btn_string": {
+    "message": "Продолжить с учетной записью Google"
+  },
+  "trialBegunModal_body_string": {
+    "message": "Использование пробной версии началось! «Pro» функции включены!"
+  },
+  "ok_btn_string": {
+    "message": "ОК"
+  },
+  "prePaymentModal_line1_string": {
+    "message": "Подпишитесь, чтобы продолжить использование «Pro» функций."
+  },
+  "choosePaymentProvider_line_string": {
+    "message": "Пожалуйста, выберите способ оплаты:"
+  },
+  "payWithGoogle_btn_string": {
+    "message": "Кредитные карты принимаются."
+  },
+  "payWithPaddle_btn_string": {
+    "message": "Кредитные карты и Paypal принимаются."
+  },
+  "paymentSuccessful_line1_string": {
+    "message": "Оплата прошла успешно! Спасибо за поддержку нашего проекта!"
+  },
+  "paymentSuccessful_line2_string": {
+    "message": "Вы в любое время можете отменить свою подписку в настройках."
+  },
+  "paymentSuccessfulPaddleMessage_line_string": {
+    "message": "Примечание. Если Ваш платеж необходимо проверить вручную, пожалуйста, подождите несколько часов, затем режим «Pro» должен активироваться автоматически. Приносим свои извинения за задержку!"
+  },
+  "cancelGoogle_line_string": {
+    "message": "Примечание. Режим «Pro» будет активен в течение 30 дней после последнего платежа."
+  },
+  "cancelSubscription_btn_string": {
+    "message": "Отменить подписку"
+  },
+  "problemWithPayment_line1_string": {
+    "message": "Возникла проблема с Вашей оплатой подписки."
+  },
+  "problemWithPayment_line2_string": {
+    "message": "После обновления информации о платеже, пожалуйста, перезагрузите это окно."
+  },
+  "updatePayment_btn_string": {
+    "message": "Обновить информацию о платеже"
+  },
+  "alreadyUserPleaseSignIn": {
+    "message": "Уже зарегистрированный пользователь? Пожалуйста, войдите в систему."
+  },
+  "pleaseSignIn": {
+    "message": "Пожалуйста, войдите в систему."
+  },
+  "signIn": {
+    "message": "Войти в систему"
+  },
+  "signOut": {
+    "message": "Выйти"
+  },
+  "options": {
+    "message": "Опции"
+  },
+  "mode": {
+    "message": "Режим:"
+  },
+  "manageSubscription": {
+    "message": "Управление подпиской"
+  },
+  "mode_free": {
+    "message": "Бесплатный"
+  },
+  "mode_pro": {
+    "message": "Pro"
+  },
+  "mode_trial": {
+    "message": "Пробный"
+  },
+  "signInStatus": {
+    "message": "Статус входа в систему"
+  },
+  "signedIn": {
+    "message": "Вошел в систему"
+  },
+  "notSignedIn": {
+    "message": "Не вошёл в систему"
+  },
+  "fix": {
+    "message": "Исправить"
+  },
+  "featureComingSoon": {
+    "message": "Функция скоро появится."
+  },
+  "showTransliterations": {
+    "message": "Показывать транслитерацию:"
+  },
+  "noTransliterations": {
+    "message": "Нет транслитерации"
+  },
+  "romaji": {
+    "message": "Ромадзи"
+  },
+  "hiragana": {
+    "message": "Хирагана"
+  },
+  "playbackSpeed": {
+    "message": "Скорость воспроизведения:"
+  },
+  "normal": {
+    "message": "Нормальная"
+  },
+  "notAvailable": {
+    "message": "Недоступно."
+  },
+  "noHTAvailable": {
+    "message": "Для выбранного языка перевода перевод человеком недоступен."
+  },
+  "noMTAvailable": {
+    "message": "Машинные переводы доступны только для оригинальных субтитров фильма."
+  },
+  "proFeature": {
+    "message": "Функция \"Pro\""
+  },
+  "saveCurrentSubtitle": {
+    "message": "Сохранить субтитры"
+  },
+  "toggleAutoPause": {
+    "message": "Включить/выключить автоматическую паузу"
+  },
+  "exportToAnki": {
+    "message": "Экспорт в Anki"
+  },
+  "pleaseSelectItemsToExport": {
+    "message": "Пожалуйста, выберите элементы для экспорта:"
+  },
+  "allItems": {
+    "message": "Все элементы"
+  },
+  "download": {
+    "message": "Скачать"
+  },
+  "subtitles": {
+    "message": "Субтитры"
+  },
+  "savedItems": {
+    "message": "Сохраненные"
+  },
+  "allLanguages": {
+    "message": "Все языки"
+  },
+  "allTypes": {
+    "message": "Все типы"
+  },
+  "yellowWords": {
+    "message": "Желтые слова"
+  },
+  "blueWords": {
+    "message": "Синие слова"
+  },
+  "greenWords": {
+    "message": "Зелёные слова"
+  },
+  "purpleWords": {
+    "message": "Фиолетовые слова"
+  },
+  "redWords": {
+    "message": "Красные слова"
+  },
+  "phrases": {
+    "message": "Фразы"
+  },
+  "noSavedItems": {
+    "message": "Нет сохраненных элементов."
+  },
+  "clickAStar": {
+    "message": "Нажмите на звездочку, чтобы сохранить субтитры, или на цветные кнопки в словаре, чтобы сохранить слово."
+  },
+  "loadingDotDotDot": {
+    "message": "Загрузка…"
+  },
+  "showMore": {
+    "message": "Показать больше"
+  },
+  "openCloseBottomPanel": {
+    "message": "Открыть / закрыть нижнюю панель"
+  },
+  "openCloseVerticalView": {
+    "message": "Открыть / закрыть вертикальный вид"
+  },
+  "close": {
+    "message": "Закрыть"
+  },
+  "autoPaused": {
+    "message": "Автоматически поставлено на паузу"
+  },
+  "pressSpaceToContinue": {
+    "message": "(Нажмите \"пробел\", чтобы продолжить)"
+  },
+  "saveWordTooltip": {
+    "message": "Сохранить слово. Вы также можете кликнуть по слову правой кнопкой мыши, чтобы сохранить его."
+  },
+  "subscriptionToProFeatures": {
+    "message": "Подписка на «Pro» функции."
+  },
+  "tryForFree": {
+    "message": "Попробовать бесплатно"
+  },
+  "noCreditCardRequired": {
+    "message": "Кредитная карта не требуется."
+  },
+  "noCharge": {
+    "message": "В отличие от остальных мы не будем взимать плату во время действия пробной версии или автоматически продлевать подписку."
+  },
+  "subscriptionActive": {
+    "message": "Ваша подписка активирована."
+  },
+  "speedUpPlayback": {
+    "message": "Ускорить воспроизведение"
+  },
+  "slowDownPlayback": {
+    "message": "Замедленное воспроизведение"
+  },
+  "highlightSavedWords_label": {
+    "message": "Выделять сохраненные слова"
+  },
+  "onLeftClick_label": {
+    "message": "По левому клику:"
+  },
+  "onRightClick_label": {
+    "message": "По правому клику:"
+  },
+  "doNothing_option": {
+    "message": "Ничего не делать"
+  },
+  "showDict_option": {
+    "message": "Показать словарь"
+  },
+  "showDictSpeak_option": {
+    "message": "Показать словарь и произнести слово"
+  },
+  "speakWord_option": {
+    "message": "Произнести слово"
+  },
+  "saveWord_option": {
+    "message": "Сохранить слово"
+  },
+  "removeAllItems": {
+    "message": "Удалить все"
+  },
+  "areYouSure": {
+    "message": "Вы уверены?"
+  },
+  "hideTranslation": {
+    "message": "Скрыть перевод:"
+  },
+  "hideTranslation_tt": {
+    "message": "Скрывайте перевод при воспроизведении видео. Нажмите на текст или [e] для отображения перевода."
+  },
+  "littlePracticeEveryDay": {
+    "message": "Для изучения языка нужно ежедневно немного практиковаться."
+  },
+  "enableLln": {
+    "message": "Включить LLN"
+  },
+  "doYouLikeOurExtension": {
+    "message": "Вам нравится LLN?"
+  },
+  "reportBug": {
+    "message": "Сообщить об ошибке"
+  },
+  "translationNotFound": {
+    "message": "Перевод не найден."
+  },
+  "usageExamples": {
+    "message": "Примеры использования"
+  },
+  "userDefinedExternalDict_label": {
+    "message": "URL-адреса пользовательского словаря:"
+  },
+  "turnOnOff": {
+    "message": "Включить/выключить"
+  },
+  "fontSize_label": {
+    "message": "Размер шрифта:"
+  },
+  "extraSmall": {
+    "message": "Очень маленький"
+  },
+  "small": {
+    "message": "Маленький"
+  },
+  "normal": {
+    "message": "Обычный"
+  },
+  "large": {
+    "message": "Большой"
+  },
+  "extraLarge": {
+    "message": "Очень большой"
+  },
+  "removeSubtitle": {
+    "message": "Удалить"
+  },
+  "settings": {
+    "message": "Параметры"
+  },
+  "subtitleLanguage_label_yt": {
+    "message": "Язык субтитров Youtube:"
+  },
+  "subtitleLanguage_tooltip_yt": {
+    "message": "Это язык выбранных субтитров Youtube."
+  },
+  "subtitlesNotLoaded_error_yt": {
+    "message": "Субтитры Youtube не были загружены. Выбран ли язык субтитров в меню воспроизведения Youtube?"
+  }
+}
