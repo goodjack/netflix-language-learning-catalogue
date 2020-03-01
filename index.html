@@ -241,15 +241,27 @@
 				display: none;
 			}
 		}
-		@media (min-width: 1024px) {
+		@media (min-width: 768px) {
 			.hide-on-desktop.hide-on-desktop.hide-on-desktop.hide-on-desktop.hide-on-desktop {
 				display: none;
 			}
 		}
-		@media (max-width: 1023px) {
+		@media (max-width: 767px) {
 			.page-wrap { padding: 0; }
 			h1 { font-size: 22px; }
-			.top-nav a { margin: 5px; padding: 5px 10px; font-size: 16px; }
+			.top-nav a { 
+				    margin: 2px 30px;
+				    padding: 5px 10px;
+				    font-size: 16px;
+				    width: calc(100% - 60px);
+				    box-shadow: none;
+				    border-top: 1px solid #ddd;
+				    box-sizing: border-box;
+				    border-radius: 0;
+			}
+			.top-nav a:last-child {
+				    border-bottom: 1px solid #ddd;
+			}
 			
 		}
 	</style>
