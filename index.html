@@ -41,9 +41,6 @@
 			body {
 				padding: 20px 10px;
 			}
-			.page-wrap {
-				padding: 25px 10px;
-			}
 
 		}
 		table, tr, td, th {
@@ -100,11 +97,6 @@
 			align-items: center;
 			justify-content: center;
 			font-weight: 500;
-		}
-		@media (max-width: 770px) {
-			h1 {
-				font-size: 26px;
-			}
 		}
 		.title {
 			position: relative;
@@ -202,16 +194,6 @@
 			display: inline-block;
 		}
 		.top-nav a:hover {    color: #c3819c;}
-		@media (max-width: 750px) {
-			.top-nav a {
-				margin: 8px 12px;
-			}
-		}
-		@media (max-width: 400px) {
-			.top-nav a {
-				margin: 8px 10px;
-			}
-		}
 		.featured-in {
 			background-color: #eee;
 		}
@@ -255,14 +237,20 @@
 			top: 20px;
 		}
 		@media (max-width: 1023px) {
-			.hide-on-mobile {
+			.hide-on-mobile.hide-on-mobile.hide-on-mobile.hide-on-mobile.hide-on-mobile {
 				display: none;
 			}
 		}
 		@media (min-width: 1024px) {
-			.hide-on-desktop {
+			.hide-on-desktop.hide-on-desktop.hide-on-desktop.hide-on-desktop.hide-on-desktop {
 				display: none;
 			}
+		}
+		@media (max-width: 1023px) {
+			.page-wrap { padding: 0; }
+			h1 { font-size: 22px; }
+			.top-nav a { margin: 5px; padding: 5px 10px; font-size: 16px; }
+			
 		}
 	</style>
 
