@@ -489,7 +489,7 @@
                 e.preventDefault();
                 let that = this;
                 var provider = new firebase.auth.GoogleAuthProvider();
-                firebase.auth().signInWithPopup(provider).then(function (result) {
+                firebase.auth().signInWithRedirect(provider).then(function (result) {
                     that.user = result.user;
                     that.onLogIn();
                 }).catch(function (error) {
